@@ -1,0 +1,11 @@
+{
+  "batch_method": "harmony",
+  "n_cells": 73788,
+  "n_genes": 36601,
+  "params": {
+    "MIN_GENES": 200,
+    "MIN_COUNTS": 500,
+    "MAX_MT": 15.0,
+    "MAX_GENES": 6000
+  }
+}

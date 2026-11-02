@@ -1,0 +1,40 @@
+cluster  0: Endothelial      support= 8/Endothelial hb= 0.36 zmargin= 0.12 (Lymphatic_EC 1.21/Endothelial 1.09)  top=PECAM1,EGFL7,TM4SF1,GNG11,RAMP2,ECSCR
+cluster  1: Endothelial      support= 7/Endothelial hb= 0.29 zmargin= 0.89 (Endothelial 2.28/Lymphatic_EC 1.38)  top=CALCRL,PODXL,PECAM1,VWF,PTPRB,HSPG2
+cluster  2: Endothelial      support= 9/Endothelial hb= 0.20 zmargin= 2.16 (Endothelial 2.64/Lymphatic_EC 0.48)  top=PECAM1,VWF,AQP1,ADGRL4,RAMP2,HSPG2
+cluster  3: Endothelial      support= 8/Endothelial hb= 0.04 zmargin= 2.19 (Endothelial 2.70/Lymphatic_EC 0.51)  top=CLDN5,IGFBP3,SRP14,ID1,ACKR1,CCL14
+cluster  4: Erythrocyte_contam support=16/Fibroblast hb= 3.13 zmargin= 0.16 (Erythrocyte 0.97/Fibroblast 0.81)  top=HBB,HBA2,DCN,HBA1,CFD,CCDC80
+cluster  5: Fibroblast       support= 9/Fibroblast hb= 0.22 zmargin= 0.14 (Fibroblast 0.35/Lymphatic_EC 0.21)  top=TIMP1,COL1A1,GAPDH,COL3A1,COL1A2,LGALS1
+cluster  6: Mast             support= 8/Mast hb= 0.29 zmargin= 4.04 (Mast 4.37/NK 0.33)  top=TPSAB1,TPSB2,CPA3,HPGD,CTSG,FTH1
+cluster  7: NK               support= 5/NK hb= 0.23 zmargin= 3.38 (NK 5.06/T_cell 1.68)  top=NKG7,CCL5,CST7,GZMA,B2M,PTPRC
+cluster  8: T_cell           support= 8/T_cell hb= 0.25 zmargin= 2.15 (T_cell 2.80/NK 0.64)  top=IL7R,CD2,BCL11B,RPS29,BTG1,RPS27
+cluster  9: Myeloid          support=10/Myeloid hb= 0.24 zmargin= 0.66 (Myeloid 1.95/Lymphatic_EC 1.29)  top=CD74,HLA-DRA,HLA-DRB1,C1QA,HLA-DPA1,C1QC
+cluster 10: Myeloid          support= 9/Myeloid hb= 0.22 zmargin= 1.06 (Myeloid 1.78/Lymphatic_EC 0.72)  top=CD74,HLA-DRA,FTL,HLA-DRB1,HLA-DPA1,AIF1
+cluster 11: Myeloid          support= 8/Myeloid hb= 0.16 zmargin= 1.08 (Myeloid 1.68/Lymphatic_EC 0.60)  top=CD83,HLA-DRA,HLA-DPA1,CD74,HLA-DPB1,HLA-DRB1
+cluster 12: Myeloid          support= 3/Myeloid hb= 0.13 zmargin= 0.77 (Myeloid 0.86/T_cell 0.09)  top=CD74,HLA-DRA,HLA-DPA1,HLA-DRB5,HLA-DPB1,NFKBIA
+cluster 13: Myeloid          support= 6/Myeloid hb= 0.28 zmargin= 0.62 (Myeloid 0.69/Lymphatic_EC 0.07)  top=CCL3,IL1B,FTL,CCL4,HLA-DRA,IER3
+cluster 14: Erythrocyte_contam support= 8/Fibroblast hb= 5.00 zmargin= 0.94 (Erythrocyte 1.71/T_cell 0.77)  top=HBB,HBA1,HBA2,S100A9,S100A8,IFITM2
+cluster 15: Erythrocyte_contam support= 7/Endothelial hb= 3.63 zmargin= 0.76 (Endothelial 2.04/Erythrocyte 1.28)  top=HBB,HBA2,HBA1,CALCRL,ENG,IFI27
+cluster 16: Mixed            support= 2/Fibroblast hb= 0.35 zmargin= 0.23 (Fibroblast 0.13/Pericyte -0.09)  top=LGALS1,SPARC,SERF2,S100A6,RPLP1,RPL37A
+cluster 17: Fibroblast       support=16/Fibroblast hb= 0.18 zmargin= 0.43 (Fibroblast 1.65/Pericyte 1.22)  top=CFD,DCN,CCDC80,FBLN1,MFAP5,C1S
+cluster 18: SMC              support= 7/SMC hb= 0.26 zmargin= 0.85 (Pericyte 2.62/SMC 1.77)  top=TAGLN,CALD1,ACTA2,MYL9,TPM2,IGFBP7
+cluster 19: Fibroblast       support=13/Fibroblast hb= 0.20 zmargin= 0.17 (Fibroblast 1.13/Pericyte 0.96)  top=BGN,PRELP,MGP,IGFBP7,AEBP1,COL14A1
+cluster 20: SMC              support= 9/SMC hb= 0.00 zmargin= 1.31 (SMC 2.99/Mast 1.68)  top=ACTG2,TAGLN,TPM2,MYL9,ACTA2,MYL6
+cluster 21: SMC              support= 3/SMC hb= 0.00 zmargin= 0.06 (SMC 0.58/Fibroblast 0.52)  top=TIMP1,SPP1,MMP9,GAPDH,PKM,APOE
+cluster 22: Fibroblast       support=19/Fibroblast hb= 0.16 zmargin= 0.28 (Fibroblast 1.05/Pericyte 0.77)  top=COL1A2,COL1A1,COL3A1,COL6A3,COL6A1,LUM
+cluster 23: Fibroblast       support= 9/Fibroblast hb= 0.03 zmargin= 0.48 (Fibroblast 0.75/Lymphatic_EC 0.27)  top=TIMP1,GAPDH,COL1A1,LGALS1,P4HB,PPIB
+cluster 24: Fibroblast       support= 7/Fibroblast hb= 0.24 zmargin= 0.26 (Erythrocyte 0.39/SMC 0.13)  top=SERPINB9,NFKBIA,MARCKS,SAT1,B2M,IER3
+cluster 25: Erythrocyte_contam support= 6/SMC hb= 4.33 zmargin= 0.31 (SMC 1.85/Erythrocyte 1.54)  top=ACTA2,HBA1,HBA2,TPM1,HBB,ACTG2
+cluster 26: Erythrocyte_contam support= 8/Erythrocyte hb= 7.28 zmargin= 4.09 (Erythrocyte 3.80/Myeloid -0.29)  top=HBB,HBA2,HBA1,SLC25A37,SNCA,ALAS2
+cluster 27: Mixed            support= 1/Myeloid hb= 0.09 zmargin= 0.91 (Myeloid 1.12/Erythrocyte 0.20)  top=EREG,IL1B,SOD2,CXCL8,SERPINB9,BCL2A1
+cluster 28: B_cell           support= 4/B_cell hb= 0.20 zmargin= 1.22 (T_cell 1.08/NK -0.15)  top=CD37,CD83,REL,EZR,HLA-DRA,HLA-DQA1
+cluster 29: Fibroblast       support= 8/Fibroblast hb= 0.00 zmargin= 0.04 (Fibroblast 0.61/T_cell 0.57)  top=AGT,TIMP1,VCAN,NDUFA4L2,CRYAB,POSTN
+cluster 30: Mast             support= 4/Mast hb= 0.00 zmargin= 2.07 (Mast 2.61/Fibroblast 0.54)  top=TPSB2,S100A4,S100A10,TPSAB1,LGALS1,COL1A2
+cluster 31: Fibroblast       support= 3/Fibroblast hb= 0.00 zmargin= 0.39 (Fibroblast 0.92/Endothelial 0.53)  top=HTRA3,AK1,TPPP3,PLA2G2A,VIM,IGFBP6
+cluster 32: Fibroblast       support= 6/Fibroblast hb= 0.00 zmargin= 0.86 (Fibroblast 0.77/SMC -0.08)  top=ISLR,RRAD,TGFBI,CTHRC1,SPARC,RCN3
+cluster 33: Mixed            support= 2/Mast hb= 0.04 zmargin= 0.26 (Mast 1.30/Endothelial 1.05)  top=ADCYAP1,MT2A,HAS2,ANGPTL4,MT1X,STC1
+cluster 34: SMC              support= 9/SMC hb= 0.06 zmargin= 0.13 (SMC 2.27/Pericyte 2.14)  top=ACTA2,TAGLN,TPM2,DSTN,CALD1,MYL9
+cluster 35: Mixed            support= 2/Myeloid hb= 0.29 zmargin= 0.01 (Myeloid 0.31/NK 0.30)  top=NAMPT,SRGN,SOD2,NEAT1,IFITM2,FTH1
+cluster 36: Myeloid          support= 7/Myeloid hb= 0.09 zmargin= 0.05 (T_cell 2.46/Myeloid 2.41)  top=CD1E,LGALS2,CD1C,IFI30,AC020656.1,FCN1
+cluster 37: SMC              support= 5/SMC hb= 0.19 zmargin= 1.82 (SMC 1.77/NK -0.05)  top=HSP90AB1,GPR183,ATF3,HSP90AA1,FOSB,CST3
+cluster 38: Fibroblast       support=14/Fibroblast hb= 0.03 zmargin= 0.37 (Fibroblast 1.53/Pericyte 1.16)  top=CFH,MGP,LUM,SERPINF1,DCN,IGFBP7
+cluster 39: Myeloid          support= 3/Myeloid hb= 0.04 zmargin= 0.05 (NK 1.96/T_cell 1.92)  top=C17orf58,IGFBP6,S100A8,JUND,CCN3,RPLP1

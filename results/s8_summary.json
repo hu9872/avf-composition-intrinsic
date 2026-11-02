@@ -1,0 +1,15 @@
+{
+  "n_lr_pairs": 34,
+  "missing_genes": [],
+  "expr_prop": 0.1,
+  "n_tested": 744,
+  "n_fdr05": 0,
+  "n_perm_partitions": 924,
+  "focus_states": [
+    "Fib_AF_resident",
+    "Fib_AF_stromal",
+    "Fib_Myofibroblast",
+    "Fib_Pericyte",
+    "Fib_SMC_contractile"
+  ]
+}

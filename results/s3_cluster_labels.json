@@ -1,0 +1,771 @@
+{
+  "labels": {
+    "0": "Endothelial",
+    "1": "Endothelial",
+    "2": "Endothelial",
+    "3": "Endothelial",
+    "4": "Erythrocyte_contam",
+    "5": "Fibroblast",
+    "6": "Mast",
+    "7": "NK",
+    "8": "T_cell",
+    "9": "Myeloid",
+    "10": "Myeloid",
+    "11": "Myeloid",
+    "12": "Myeloid",
+    "13": "Myeloid",
+    "14": "Erythrocyte_contam",
+    "15": "Erythrocyte_contam",
+    "16": "Mixed",
+    "17": "Fibroblast",
+    "18": "SMC",
+    "19": "Fibroblast",
+    "20": "SMC",
+    "21": "SMC",
+    "22": "Fibroblast",
+    "23": "Fibroblast",
+    "24": "Fibroblast",
+    "25": "Erythrocyte_contam",
+    "26": "Erythrocyte_contam",
+    "27": "Mixed",
+    "28": "B_cell",
+    "29": "Fibroblast",
+    "30": "Mast",
+    "31": "Fibroblast",
+    "32": "Fibroblast",
+    "33": "Mixed",
+    "34": "SMC",
+    "35": "Mixed",
+    "36": "Myeloid",
+    "37": "SMC",
+    "38": "Fibroblast",
+    "39": "Myeloid"
+  },
+  "decision": {
+    "0": {
+      "assigned": "Endothelial",
+      "marker_support": {
+        "Endothelial": 8,
+        "Lymphatic_EC": 3,
+        "SMC": 0,
+        "Fibroblast": 0,
+        "Pericyte": 0
+      },
+      "best_panel": "Endothelial",
+      "n_best_markers": 8,
+      "hb_mean": 0.364,
+      "z_margin": 0.118,
+      "z_top1": "Lymphatic_EC:1.21",
+      "z_top2": "Endothelial:1.09",
+      "top_markers": "PECAM1,EGFL7,TM4SF1,GNG11,RAMP2,ECSCR,CLDN5,VIM,SLC9A3R2,PODXL,CD59,ID1",
+      "n": 1977
+    },
+    "1": {
+      "assigned": "Endothelial",
+      "marker_support": {
+        "Endothelial": 7,
+        "Lymphatic_EC": 0,
+        "SMC": 0,
+        "Fibroblast": 0,
+        "Pericyte": 0
+      },
+      "best_panel": "Endothelial",
+      "n_best_markers": 7,
+      "hb_mean": 0.289,
+      "z_margin": 0.894,
+      "z_top1": "Endothelial:2.28",
+      "z_top2": "Lymphatic_EC:1.38",
+      "top_markers": "CALCRL,PODXL,PECAM1,VWF,PTPRB,HSPG2,BMPR2,TGM2,ECSCR,ECE1,AQP1,RAMP2",
+      "n": 806
+    },
+    "2": {
+      "assigned": "Endothelial",
+      "marker_support": {
+        "Endothelial": 9,
+        "Lymphatic_EC": 0,
+        "SMC": 0,
+        "Fibroblast": 0,
+        "Pericyte": 0
+      },
+      "best_panel": "Endothelial",
+      "n_best_markers": 9,
+      "hb_mean": 0.201,
+      "z_margin": 2.157,
+      "z_top1": "Endothelial:2.64",
+      "z_top2": "Lymphatic_EC:0.48",
+      "top_markers": "PECAM1,VWF,AQP1,ADGRL4,RAMP2,HSPG2,TM4SF1,EGFL7,CDH5,CALCRL,PTPRB,EMCN",
+      "n": 7070
+    },
+    "3": {
+      "assigned": "Endothelial",
+      "marker_support": {
+        "Endothelial": 8,
+        "Lymphatic_EC": 0,
+        "SMC": 0,
+        "Fibroblast": 0,
+        "Pericyte": 0
+      },
+      "best_panel": "Endothelial",
+      "n_best_markers": 8,
+      "hb_mean": 0.039,
+      "z_margin": 2.187,
+      "z_top1": "Endothelial:2.70",
+      "z_top2": "Lymphatic_EC:0.51",
+      "top_markers": "CLDN5,IGFBP3,SRP14,ID1,ACKR1,CCL14,NRN1,CAV1,TXNIP,EGFL7,ADIRF,CLEC14A",
+      "n": 51
+    },
+    "4": {
+      "assigned": "Erythrocyte_contam",
+      "marker_support": {
+        "Fibroblast": 16,
+        "Erythrocyte": 3,
+        "Endothelial": 1,
+        "Lymphatic_EC": 0,
+        "Pericyte": 0
+      },
+      "best_panel": "Fibroblast",
+      "n_best_markers": 16,
+      "hb_mean": 3.13,
+      "z_margin": 0.165,
+      "z_top1": "Erythrocyte:0.97",
+      "z_top2": "Fibroblast:0.81",
+      "top_markers": "HBB,HBA2,DCN,HBA1,CFD,CCDC80,GSN,FBLN1,COL1A1,COL1A2,CLU,MGP",
+      "n": 817
+    },
+    "5": {
+      "assigned": "Fibroblast",
+      "marker_support": {
+        "Fibroblast": 9,
+        "SMC": 1,
+        "Lymphatic_EC": 0,
+        "Endothelial": 0,
+        "Pericyte": 0
+      },
+      "best_panel": "Fibroblast",
+      "n_best_markers": 9,
+      "hb_mean": 0.217,
+      "z_margin": 0.138,
+      "z_top1": "Fibroblast:0.35",
+      "z_top2": "Lymphatic_EC:0.21",
+      "top_markers": "TIMP1,COL1A1,GAPDH,COL3A1,COL1A2,LGALS1,CXCL8,COL6A2,FN1,IL1B,SPARC,CXCL3",
+      "n": 2405
+    },
+    "6": {
+      "assigned": "Mast",
+      "marker_support": {
+        "Mast": 8,
+        "Endothelial": 0,
+        "SMC": 0,
+        "Fibroblast": 0,
+        "Pericyte": 0
+      },
+      "best_panel": "Mast",
+      "n_best_markers": 8,
+      "hb_mean": 0.285,
+      "z_margin": 4.042,
+      "z_top1": "Mast:4.37",
+      "z_top2": "NK:0.33",
+      "top_markers": "TPSAB1,TPSB2,CPA3,HPGD,CTSG,FTH1,MS4A2,HPGDS,KIT,GATA2,HDC,SRGN",
+      "n": 1515
+    },
+    "7": {
+      "assigned": "NK",
+      "marker_support": {
+        "T_cell": 6,
+        "NK": 5,
+        "SMC": 0,
+        "Fibroblast": 0,
+        "Endothelial": 0
+      },
+      "best_panel": "NK",
+      "n_best_markers": 5,
+      "hb_mean": 0.229,
+      "z_margin": 3.376,
+      "z_top1": "NK:5.06",
+      "z_top2": "T_cell:1.68",
+      "top_markers": "NKG7,CCL5,CST7,GZMA,B2M,PTPRC,HCST,HLA-B,HLA-A,RPS27,HLA-C,RPS29",
+      "n": 2478
+    },
+    "8": {
+      "assigned": "T_cell",
+      "marker_support": {
+        "T_cell": 8,
+        "Endothelial": 0,
+        "SMC": 0,
+        "Fibroblast": 0,
+        "Pericyte": 0
+      },
+      "best_panel": "T_cell",
+      "n_best_markers": 8,
+      "hb_mean": 0.252,
+      "z_margin": 2.153,
+      "z_top1": "T_cell:2.80",
+      "z_top2": "NK:0.64",
+      "top_markers": "IL7R,CD2,BCL11B,RPS29,BTG1,RPS27,PTPRC,CD52,CXCR4,RPL28,CYTIP,CD69",
+      "n": 6944
+    },
+    "9": {
+      "assigned": "Myeloid",
+      "marker_support": {
+        "Myeloid": 10,
+        "Endothelial": 0,
+        "Lymphatic_EC": 0,
+        "SMC": 0,
+        "Fibroblast": 0
+      },
+      "best_panel": "Myeloid",
+      "n_best_markers": 10,
+      "hb_mean": 0.236,
+      "z_margin": 0.657,
+      "z_top1": "Myeloid:1.95",
+      "z_top2": "Lymphatic_EC:1.29",
+      "top_markers": "CD74,HLA-DRA,HLA-DRB1,C1QA,HLA-DPA1,C1QC,MS4A6A,HLA-DPB1,C1QB,AIF1,CYBB,HLA-DQB1",
+      "n": 3680
+    },
+    "10": {
+      "assigned": "Myeloid",
+      "marker_support": {
+        "Myeloid": 9,
+        "Endothelial": 0,
+        "Lymphatic_EC": 0,
+        "SMC": 0,
+        "Fibroblast": 0
+      },
+      "best_panel": "Myeloid",
+      "n_best_markers": 9,
+      "hb_mean": 0.224,
+      "z_margin": 1.061,
+      "z_top1": "Myeloid:1.78",
+      "z_top2": "Lymphatic_EC:0.72",
+      "top_markers": "CD74,HLA-DRA,FTL,HLA-DRB1,HLA-DPA1,AIF1,HLA-DPB1,TYROBP,HLA-DQA1,HLA-DQB1,CD68,NPC2",
+      "n": 1916
+    },
+    "11": {
+      "assigned": "Myeloid",
+      "marker_support": {
+        "Myeloid": 8,
+        "Endothelial": 0,
+        "Lymphatic_EC": 0,
+        "SMC": 0,
+        "Fibroblast": 0
+      },
+      "best_panel": "Myeloid",
+      "n_best_markers": 8,
+      "hb_mean": 0.157,
+      "z_margin": 1.076,
+      "z_top1": "Myeloid:1.68",
+      "z_top2": "Lymphatic_EC:0.60",
+      "top_markers": "CD83,HLA-DRA,HLA-DPA1,CD74,HLA-DPB1,HLA-DRB1,FCGR2A,CCL3,HLA-DQB1,HLA-DQA1,TYROBP,HLA-DMA",
+      "n": 8133
+    },
+    "12": {
+      "assigned": "Myeloid",
+      "marker_support": {
+        "Myeloid": 3,
+        "Endothelial": 0,
+        "Lymphatic_EC": 0,
+        "SMC": 0,
+        "Fibroblast": 0
+      },
+      "best_panel": "Myeloid",
+      "n_best_markers": 3,
+      "hb_mean": 0.127,
+      "z_margin": 0.766,
+      "z_top1": "Myeloid:0.86",
+      "z_top2": "T_cell:0.09",
+      "top_markers": "CD74,HLA-DRA,HLA-DPA1,HLA-DRB5,HLA-DPB1,NFKBIA,HLA-DRB1,B2M,HLA-DQB1,CD83,HLA-DQA1,IER3",
+      "n": 88
+    },
+    "13": {
+      "assigned": "Myeloid",
+      "marker_support": {
+        "Myeloid": 6,
+        "Fibroblast": 3,
+        "Lymphatic_EC": 0,
+        "Endothelial": 0,
+        "SMC": 0
+      },
+      "best_panel": "Myeloid",
+      "n_best_markers": 6,
+      "hb_mean": 0.28,
+      "z_margin": 0.623,
+      "z_top1": "Myeloid:0.69",
+      "z_top2": "Lymphatic_EC:0.07",
+      "top_markers": "CCL3,IL1B,FTL,CCL4,HLA-DRA,IER3,CCL3L1,CD74,CXCL3,FTH1,CXCL8,CCL4L2",
+      "n": 1008
+    },
+    "14": {
+      "assigned": "Erythrocyte_contam",
+      "marker_support": {
+        "Fibroblast": 8,
+        "Myeloid": 3,
+        "Erythrocyte": 3,
+        "T_cell": 1,
+        "Lymphatic_EC": 0
+      },
+      "best_panel": "Fibroblast",
+      "n_best_markers": 8,
+      "hb_mean": 4.997,
+      "z_margin": 0.942,
+      "z_top1": "Erythrocyte:1.71",
+      "z_top2": "T_cell:0.77",
+      "top_markers": "HBB,HBA1,HBA2,S100A9,S100A8,IFITM2,MEG3,H19,TIMP1,CTSS,CCL5,POSTN",
+      "n": 50
+    },
+    "15": {
+      "assigned": "Erythrocyte_contam",
+      "marker_support": {
+        "Endothelial": 7,
+        "Erythrocyte": 3,
+        "Fibroblast": 1,
+        "Lymphatic_EC": 0,
+        "Pericyte": 0
+      },
+      "best_panel": "Endothelial",
+      "n_best_markers": 7,
+      "hb_mean": 3.626,
+      "z_margin": 0.761,
+      "z_top1": "Endothelial:2.04",
+      "z_top2": "Erythrocyte:1.28",
+      "top_markers": "HBB,HBA2,HBA1,CALCRL,ENG,IFI27,AQP1,SLC9A3R2,RAMP2,PECAM1,PODXL,CD59",
+      "n": 187
+    },
+    "16": {
+      "assigned": "Mixed",
+      "marker_support": {
+        "Fibroblast": 2,
+        "Endothelial": 0,
+        "Lymphatic_EC": 0,
+        "SMC": 0,
+        "Pericyte": 0
+      },
+      "best_panel": "Fibroblast",
+      "n_best_markers": 2,
+      "hb_mean": 0.351,
+      "z_margin": 0.225,
+      "z_top1": "Fibroblast:0.13",
+      "z_top2": "Pericyte:-0.09",
+      "top_markers": "LGALS1,SPARC,SERF2,S100A6,RPLP1,RPL37A,RPL41,EEF1A1,RPL13A,RPS18,RPL37,RPS12",
+      "n": 1188
+    },
+    "17": {
+      "assigned": "Fibroblast",
+      "marker_support": {
+        "Fibroblast": 16,
+        "Endothelial": 0,
+        "Lymphatic_EC": 0,
+        "SMC": 0,
+        "Pericyte": 0
+      },
+      "best_panel": "Fibroblast",
+      "n_best_markers": 16,
+      "hb_mean": 0.182,
+      "z_margin": 0.43,
+      "z_top1": "Fibroblast:1.65",
+      "z_top2": "Pericyte:1.22",
+      "top_markers": "CFD,DCN,CCDC80,FBLN1,MFAP5,C1S,GSN,C1R,FBLN2,CXCL14,FBN1,LUM",
+      "n": 6738
+    },
+    "18": {
+      "assigned": "SMC",
+      "marker_support": {
+        "SMC": 7,
+        "Pericyte": 2,
+        "Lymphatic_EC": 0,
+        "Endothelial": 0,
+        "Fibroblast": 0
+      },
+      "best_panel": "SMC",
+      "n_best_markers": 7,
+      "hb_mean": 0.258,
+      "z_margin": 0.851,
+      "z_top1": "Pericyte:2.62",
+      "z_top2": "SMC:1.77",
+      "top_markers": "TAGLN,CALD1,ACTA2,MYL9,TPM2,IGFBP7,TPM1,MCAM,MYLK,NOTCH3,PPP1R14A,DSTN",
+      "n": 4832
+    },
+    "19": {
+      "assigned": "Fibroblast",
+      "marker_support": {
+        "Fibroblast": 13,
+        "SMC": 1,
+        "Lymphatic_EC": 0,
+        "Endothelial": 0,
+        "Pericyte": 0
+      },
+      "best_panel": "Fibroblast",
+      "n_best_markers": 13,
+      "hb_mean": 0.197,
+      "z_margin": 0.174,
+      "z_top1": "Fibroblast:1.13",
+      "z_top2": "Pericyte:0.96",
+      "top_markers": "BGN,PRELP,MGP,IGFBP7,AEBP1,COL14A1,CFH,PDLIM3,LUM,DKK3,TAGLN,EDIL3",
+      "n": 3329
+    },
+    "20": {
+      "assigned": "SMC",
+      "marker_support": {
+        "SMC": 9,
+        "Mast": 2,
+        "Lymphatic_EC": 0,
+        "Fibroblast": 0,
+        "Pericyte": 0
+      },
+      "best_panel": "SMC",
+      "n_best_markers": 9,
+      "hb_mean": 0.0,
+      "z_margin": 1.31,
+      "z_top1": "SMC:2.99",
+      "z_top2": "Mast:1.68",
+      "top_markers": "ACTG2,TAGLN,TPM2,MYL9,ACTA2,MYL6,TPSB2,S100A6,GAPDH,CCL2,NDUFA4,CALD1",
+      "n": 24
+    },
+    "21": {
+      "assigned": "SMC",
+      "marker_support": {
+        "SMC": 3,
+        "Myeloid": 2,
+        "Lymphatic_EC": 0,
+        "Endothelial": 0,
+        "Fibroblast": 0
+      },
+      "best_panel": "SMC",
+      "n_best_markers": 3,
+      "hb_mean": 0.0,
+      "z_margin": 0.06,
+      "z_top1": "SMC:0.58",
+      "z_top2": "Fibroblast:0.52",
+      "top_markers": "TIMP1,SPP1,MMP9,GAPDH,PKM,APOE,MARCO,LGALS1,APOC1,VIM,CALR,ENO1",
+      "n": 43
+    },
+    "22": {
+      "assigned": "Fibroblast",
+      "marker_support": {
+        "Fibroblast": 19,
+        "SMC": 1,
+        "Lymphatic_EC": 0,
+        "Endothelial": 0,
+        "Pericyte": 0
+      },
+      "best_panel": "Fibroblast",
+      "n_best_markers": 19,
+      "hb_mean": 0.157,
+      "z_margin": 0.278,
+      "z_top1": "Fibroblast:1.05",
+      "z_top2": "Pericyte:0.77",
+      "top_markers": "COL1A2,COL1A1,COL3A1,COL6A3,COL6A1,LUM,COL6A2,DCN,CCDC80,SPARC,COL5A2,MEG3",
+      "n": 9677
+    },
+    "23": {
+      "assigned": "Fibroblast",
+      "marker_support": {
+        "Fibroblast": 9,
+        "SMC": 1,
+        "Lymphatic_EC": 0,
+        "Endothelial": 0,
+        "Pericyte": 0
+      },
+      "best_panel": "Fibroblast",
+      "n_best_markers": 9,
+      "hb_mean": 0.035,
+      "z_margin": 0.482,
+      "z_top1": "Fibroblast:0.75",
+      "z_top2": "Lymphatic_EC:0.27",
+      "top_markers": "TIMP1,GAPDH,COL1A1,LGALS1,P4HB,PPIB,SERPINH1,COL3A1,MIF,COL6A2,BGN,COL5A2",
+      "n": 1651
+    },
+    "24": {
+      "assigned": "Fibroblast",
+      "marker_support": {
+        "Fibroblast": 7,
+        "SMC": 1,
+        "Lymphatic_EC": 0,
+        "Endothelial": 0,
+        "Pericyte": 0
+      },
+      "best_panel": "Fibroblast",
+      "n_best_markers": 7,
+      "hb_mean": 0.24,
+      "z_margin": 0.255,
+      "z_top1": "Erythrocyte:0.39",
+      "z_top2": "SMC:0.13",
+      "top_markers": "SERPINB9,NFKBIA,MARCKS,SAT1,B2M,IER3,COL4A1,TMSB4X,ZFP36L1,CARMN,LGALS1,FN1",
+      "n": 25
+    },
+    "25": {
+      "assigned": "Erythrocyte_contam",
+      "marker_support": {
+        "SMC": 6,
+        "Erythrocyte": 3,
+        "Fibroblast": 2,
+        "Lymphatic_EC": 0,
+        "Pericyte": 0
+      },
+      "best_panel": "SMC",
+      "n_best_markers": 6,
+      "hb_mean": 4.326,
+      "z_margin": 0.312,
+      "z_top1": "SMC:1.85",
+      "z_top2": "Erythrocyte:1.54",
+      "top_markers": "ACTA2,HBA1,HBA2,TPM1,HBB,ACTG2,TPM2,MYL9,CSRP1,ACTB,TAGLN,PPP1R14A",
+      "n": 29
+    },
+    "26": {
+      "assigned": "Erythrocyte_contam",
+      "marker_support": {
+        "Erythrocyte": 8,
+        "Endothelial": 0,
+        "SMC": 0,
+        "Fibroblast": 0,
+        "Pericyte": 0
+      },
+      "best_panel": "Erythrocyte",
+      "n_best_markers": 8,
+      "hb_mean": 7.277,
+      "z_margin": 4.093,
+      "z_top1": "Erythrocyte:3.80",
+      "z_top2": "Myeloid:-0.29",
+      "top_markers": "HBB,HBA2,HBA1,SLC25A37,SNCA,ALAS2,GYPC,SLC25A39,EPB41,DCAF12,FKBP8,FAM210B",
+      "n": 1069
+    },
+    "27": {
+      "assigned": "Mixed",
+      "marker_support": {
+        "Myeloid": 1,
+        "Endothelial": 0,
+        "Lymphatic_EC": 0,
+        "SMC": 0,
+        "Fibroblast": 0
+      },
+      "best_panel": "Myeloid",
+      "n_best_markers": 1,
+      "hb_mean": 0.092,
+      "z_margin": 0.911,
+      "z_top1": "Myeloid:1.12",
+      "z_top2": "Erythrocyte:0.20",
+      "top_markers": "EREG,IL1B,SOD2,CXCL8,SERPINB9,BCL2A1,CD44,NFKB1,ATP2B1,LYZ,FTH1,KYNU",
+      "n": 1403
+    },
+    "28": {
+      "assigned": "B_cell",
+      "marker_support": {
+        "B_cell": 4,
+        "T_cell": 3,
+        "Plasma": 1,
+        "SMC": 0,
+        "Endothelial": 0
+      },
+      "best_panel": "B_cell",
+      "n_best_markers": 4,
+      "hb_mean": 0.2,
+      "z_margin": 1.224,
+      "z_top1": "T_cell:1.08",
+      "z_top2": "NK:-0.15",
+      "top_markers": "CD37,CD83,REL,EZR,HLA-DRA,HLA-DQA1,MS4A1,CD74,HLA-DQB1,NFKBID,RPS11,LTB",
+      "n": 441
+    },
+    "29": {
+      "assigned": "Fibroblast",
+      "marker_support": {
+        "Fibroblast": 8,
+        "SMC": 2,
+        "Myeloid": 1,
+        "Endothelial": 0,
+        "Lymphatic_EC": 0
+      },
+      "best_panel": "Fibroblast",
+      "n_best_markers": 8,
+      "hb_mean": 0.0,
+      "z_margin": 0.043,
+      "z_top1": "Fibroblast:0.61",
+      "z_top2": "T_cell:0.57",
+      "top_markers": "AGT,TIMP1,VCAN,NDUFA4L2,CRYAB,POSTN,APOE,COMP,NEAT1,IGFBP4,TGM2,HSP90B1",
+      "n": 23
+    },
+    "30": {
+      "assigned": "Mast",
+      "marker_support": {
+        "Fibroblast": 7,
+        "Mast": 4,
+        "Lymphatic_EC": 0,
+        "SMC": 0,
+        "Pericyte": 0
+      },
+      "best_panel": "Mast",
+      "n_best_markers": 4,
+      "hb_mean": 0.0,
+      "z_margin": 2.073,
+      "z_top1": "Mast:2.61",
+      "z_top2": "Fibroblast:0.54",
+      "top_markers": "TPSB2,S100A4,S100A10,TPSAB1,LGALS1,COL1A2,TUBA1B,NME2,COL1A1,SFRP4,MT-CO2,VIM",
+      "n": 32
+    },
+    "31": {
+      "assigned": "Fibroblast",
+      "marker_support": {
+        "Fibroblast": 3,
+        "Endothelial": 0,
+        "Lymphatic_EC": 0,
+        "SMC": 0,
+        "Pericyte": 0
+      },
+      "best_panel": "Fibroblast",
+      "n_best_markers": 3,
+      "hb_mean": 0.0,
+      "z_margin": 0.389,
+      "z_top1": "Fibroblast:0.92",
+      "z_top2": "Endothelial:0.53",
+      "top_markers": "HTRA3,AK1,TPPP3,PLA2G2A,VIM,IGFBP6,TUBB2A,COMP,ANXA2,TUBB,B4GALT1,S100A10",
+      "n": 13
+    },
+    "32": {
+      "assigned": "Fibroblast",
+      "marker_support": {
+        "Fibroblast": 6,
+        "Endothelial": 0,
+        "Lymphatic_EC": 0,
+        "SMC": 0,
+        "Pericyte": 0
+      },
+      "best_panel": "Fibroblast",
+      "n_best_markers": 6,
+      "hb_mean": 0.0,
+      "z_margin": 0.857,
+      "z_top1": "Fibroblast:0.77",
+      "z_top2": "SMC:-0.08",
+      "top_markers": "ISLR,RRAD,TGFBI,CTHRC1,SPARC,RCN3,IGFBP6,COL1A1,COL5A2,P4HB,FN1,COL5A1",
+      "n": 20
+    },
+    "33": {
+      "assigned": "Mixed",
+      "marker_support": {
+        "Mast": 2,
+        "T_cell": 1,
+        "SMC": 0,
+        "Fibroblast": 0,
+        "Endothelial": 0
+      },
+      "best_panel": "Mast",
+      "n_best_markers": 2,
+      "hb_mean": 0.045,
+      "z_margin": 0.255,
+      "z_top1": "Mast:1.30",
+      "z_top2": "Endothelial:1.05",
+      "top_markers": "ADCYAP1,MT2A,HAS2,ANGPTL4,MT1X,STC1,PRG4,HK2,SERPINB2,GDF15,NTS,SERPINE1",
+      "n": 10
+    },
+    "34": {
+      "assigned": "SMC",
+      "marker_support": {
+        "SMC": 9,
+        "Fibroblast": 1,
+        "Pericyte": 1,
+        "Endothelial": 0,
+        "Lymphatic_EC": 0
+      },
+      "best_panel": "SMC",
+      "n_best_markers": 9,
+      "hb_mean": 0.056,
+      "z_margin": 0.127,
+      "z_top1": "SMC:2.27",
+      "z_top2": "Pericyte:2.14",
+      "top_markers": "ACTA2,TAGLN,TPM2,DSTN,CALD1,MYL9,TPM1,IGFBP7,MYH11,PPP1R14A,LTBP1,OGN",
+      "n": 980
+    },
+    "35": {
+      "assigned": "Mixed",
+      "marker_support": {
+        "Myeloid": 2,
+        "Endothelial": 0,
+        "Lymphatic_EC": 0,
+        "SMC": 0,
+        "Fibroblast": 0
+      },
+      "best_panel": "Myeloid",
+      "n_best_markers": 2,
+      "hb_mean": 0.293,
+      "z_margin": 0.007,
+      "z_top1": "Myeloid:0.31",
+      "z_top2": "NK:0.30",
+      "top_markers": "NAMPT,SRGN,SOD2,NEAT1,IFITM2,FTH1,SAT1,S100A9,LITAF,S100A8,CXCL8,C5AR1",
+      "n": 2867
+    },
+    "36": {
+      "assigned": "Myeloid",
+      "marker_support": {
+        "Myeloid": 7,
+        "T_cell": 3,
+        "Lymphatic_EC": 0,
+        "SMC": 0,
+        "Fibroblast": 0
+      },
+      "best_panel": "Myeloid",
+      "n_best_markers": 7,
+      "hb_mean": 0.093,
+      "z_margin": 0.051,
+      "z_top1": "T_cell:2.46",
+      "z_top2": "Myeloid:2.41",
+      "top_markers": "CD1E,LGALS2,CD1C,IFI30,AC020656.1,FCN1,S100A12,CFP,LYZ,CCL18,SDS,FABP5",
+      "n": 10
+    },
+    "37": {
+      "assigned": "SMC",
+      "marker_support": {
+        "SMC": 5,
+        "Endothelial": 0,
+        "Lymphatic_EC": 0,
+        "Fibroblast": 0,
+        "Pericyte": 0
+      },
+      "best_panel": "SMC",
+      "n_best_markers": 5,
+      "hb_mean": 0.192,
+      "z_margin": 1.82,
+      "z_top1": "SMC:1.77",
+      "z_top2": "NK:-0.05",
+      "top_markers": "HSP90AB1,GPR183,ATF3,HSP90AA1,FOSB,CST3,NR4A2,HLA-DRA,DNAJB1,HSPH1,HLA-DQA1,HSPD1",
+      "n": 24
+    },
+    "38": {
+      "assigned": "Fibroblast",
+      "marker_support": {
+        "Fibroblast": 14,
+        "Pericyte": 1,
+        "Lymphatic_EC": 0,
+        "Endothelial": 0,
+        "SMC": 0
+      },
+      "best_panel": "Fibroblast",
+      "n_best_markers": 14,
+      "hb_mean": 0.033,
+      "z_margin": 0.371,
+      "z_top1": "Fibroblast:1.53",
+      "z_top2": "Pericyte:1.16",
+      "top_markers": "CFH,MGP,LUM,SERPINF1,DCN,IGFBP7,CCDC80,PRELP,EPHA3,CYBRD1,F3,CRISPLD2",
+      "n": 225
+    },
+    "39": {
+      "assigned": "Myeloid",
+      "marker_support": {
+        "Myeloid": 3,
+        "Fibroblast": 2,
+        "T_cell": 1,
+        "Lymphatic_EC": 0,
+        "SMC": 0
+      },
+      "best_panel": "Myeloid",
+      "n_best_markers": 3,
+      "hb_mean": 0.037,
+      "z_margin": 0.047,
+      "z_top1": "NK:1.96",
+      "z_top2": "T_cell:1.92",
+      "top_markers": "C17orf58,IGFBP6,S100A8,JUND,CCN3,RPLP1,DUSP2,TPPP3,S100A9,CFD,RGCC,HSPA8",
+      "n": 10
+    }
+  },
+  "rule": "rank-based marker support, top50 genes, logFC>0.5, support>=3, size-normalised",
+  "excluded": [
+    "Erythrocyte_contam",
+    "Mixed"
+  ]
+}

@@ -1,0 +1,8 @@
+compartment,n_de_before,n_de_after,n_removed
+Myeloid,16,7,9
+Endothelial,7,5,2
+Mast,2,2,0
+T_cell,2,2,0
+Fib_Myofibroblast,1,1,0
+Fib_Pericyte,1,1,0
+Fib_SMC_contractile,1,1,0

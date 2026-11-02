@@ -1,0 +1,12 @@
+compartment,n_failed,n_mature,n_cells,n_tested,n_de,n_up,n_down
+Myeloid,6,6,9244,20601,16,4,12
+Endothelial,6,6,7057,19585,7,3,4
+Mast,6,6,897,9433,2,0,2
+T_cell,6,6,4674,16234,2,1,1
+Fib_SMC_contractile,6,6,3225,17677,1,0,1
+Fib_Pericyte,6,6,2008,16104,1,0,1
+Fib_Myofibroblast,6,4,2130,16725,1,1,0
+Fib_AF_resident,6,6,9214,21356,0,0,0
+B_cell,5,3,263,8692,0,0,0
+Fib_AF_stromal,6,6,3995,18577,0,0,0
+NK,6,6,1446,12937,0,0,0

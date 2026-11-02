@@ -1,0 +1,9 @@
+compartment,failed_mean,mature_mean,diff,ratio,cohens_d,welch_p,n_failed,n_matured
+Fibroblast,0.9755,0.9001,0.0754,1.084,0.529,0.3049,11,9
+SMC,0.0245,0.0999,-0.0754,0.246,-0.529,0.3049,11,9
+B_cell,0.0,0.0,0.0,,,,11,9
+Endothelial,0.0,0.0,0.0,,,,11,9
+Mast,0.0,0.0,0.0,,,,11,9
+Myeloid,0.0,0.0,0.0,,,,11,9
+NK,0.0,0.0,0.0,,,,11,9
+T_cell,0.0,0.0,0.0,,,,11,9

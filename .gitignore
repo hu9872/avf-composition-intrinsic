@@ -1,0 +1,49 @@
+# ---- Raw and intermediate data (about 23 GB; see data/README.md for download) ----
+data/
+!data/README.md
+
+# ---- Large intermediate result tables (>2 MB, rebuilt by the pipeline; see docs/RESULTS_INDEX.md) ----
+results/s3_cluster_markers.csv
+results/s4_subcluster_markers.csv
+results/s5d_markers*.csv
+results/s5c_compartment_de_all.csv
+results/s5_pseudobulk_de.csv
+results/s5e_cdc2_state_markers.csv
+results/s5d_dc_markers.csv
+results/s2_qc_before.csv
+results/s5g_gene_compartment_means.csv
+
+# ---- Internal working notes (not part of the public archive) ----
+.workbuddy/
+plan/
+STATUS.md
+
+# ---- Private and temporary files ----
+_ref/
+_v7_dump.txt
+_stat_tmp*
+*.h5ad
+*.loom
+*.rds
+
+# ---- Typeset outputs (rebuilt by code/41_build_iscience_docx.py and code/45_build_document_s1.py) ----
+manuscript/*.docx
+supplement/*.docx
+plan/**/*.docx
+
+# ---- Packaged release archive built for deposit ----
+dist/
+
+# ---- Python and OS clutter ----
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db
+.venv/
+venv/
+*.log
+
+# ---- Large supplementary tables (>5 MB, rebuilt by make tables) ----
+supplement/csv/S3_pseudobulk_DE.csv
+supplement/csv/S5_compartment_DE.csv

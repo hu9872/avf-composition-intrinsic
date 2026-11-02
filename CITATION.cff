@@ -1,0 +1,40 @@
+cff-version: 1.2.0
+message: "If you use this code or the derived tables, please cite both the archive and the article."
+title: "Analysis code for: Apparent transcriptional signatures of arteriovenous fistula maturation failure are dominated by cell composition"
+abstract: >-
+  Pre-specified reanalysis of public human arteriovenous fistula single-cell RNA-sequencing
+  data (GSE305423) that separates the effect of cell composition from cell-intrinsic
+  transcriptional change, with power analysis, threshold sensitivity, and a bulk-cohort
+  signature check (GSE220796).
+type: software
+license: MIT
+repository-code: "https://github.com/hu9872/avf-composition-intrinsic"
+url: "https://github.com/hu9872/avf-composition-intrinsic"
+version: "1.0.1"
+date-released: "2026-11-03"
+keywords:
+  - arteriovenous fistula
+  - single-cell RNA sequencing
+  - cell composition
+  - reproducibility
+  - negative results
+authors:
+  - family-names: "Tang"
+    given-names: "Yuewu"
+    affiliation: "Department of Nephrology, Chongqing University Three Gorges Hospital, 165 Xincheng Road, Wanzhou District, Chongqing 404000, China"
+  - family-names: "Hu"
+    given-names: "Daijun"
+    affiliation: "Department of Nephrology, Chongqing University Three Gorges Hospital, 165 Xincheng Road, Wanzhou District, Chongqing 404000, China"
+    # 有 ORCID 才取消下面一行注释，填完整 19 位；没有就保持注释状态，不要留空壳占位
+    # orcid: "https://orcid.org/0000-0000-0000-0000"
+preferred-citation:
+  type: article
+  title: "Apparent transcriptional signatures of arteriovenous fistula maturation failure are dominated by cell composition"
+  authors:
+    - family-names: "Tang"
+      given-names: "Yuewu"
+    - family-names: "Hu"
+      given-names: "Daijun"
+  journal: "iScience"
+  year: 2026
+  # 文章被接收后再补 volume/pages/doi；在此之前 Zenodo 记录以 software 类型为准

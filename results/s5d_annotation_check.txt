@@ -1,0 +1,22 @@
+cluster  0: Macrophage       z1=Macrophage: 2.32 z2=Mono_nonclassical: 0.30 vote=Macrophage(100%) n=842
+cluster  1: Mono_classical   z1=Mono_classical: 1.40 z2=Neutrophil: 1.25 vote=Macrophage(69%) n=619
+cluster  2: Macrophage       z1=Macrophage: 1.24 z2=Mono_nonclassical: 0.65 vote=Macrophage(81%) n=2052
+cluster  3: cDC1             z1=cDC1: 1.29 z2=Mono_nonclassical: 0.90 vote=Macrophage(52%) n=1200
+cluster  4: cDC2             z1=cDC2: 2.10 z2=cDC1: 1.27 vote=cDC2(52%) n=1152
+cluster  5: Mono_classical   z1=Mono_classical: 1.23 z2=Neutrophil: 0.79 vote=Mono_classical(38%) n=670
+cluster  6: Macrophage       z1=Macrophage: 0.61 z2=Mono_classical:-0.15 vote=Macrophage(79%) n=470
+cluster  7: cDC1             z1=cDC1: 1.52 z2=Neutrophil: 1.17 vote=Macrophage(49%) n=2062
+cluster  8: Mast             z1=Mast: 3.44 z2=Mono_classical: 0.39 vote=Macrophage(40%) n=850
+cluster  9: Mast             z1=Mast: 2.55 z2=pDC: 0.46 vote=Macrophage(39%) n=255
+cluster 10: Neutrophil       z1=Neutrophil: 2.50 z2=Mono_classical: 1.54 vote=Mono_classical(60%) n=10
+cluster 11: Mono_nonclassical z1=Mono_nonclassical: 1.90 z2=cDC1: 0.95 vote=Macrophage(59%) n=94
+cluster 12: cDC1             z1=cDC1: 2.04 z2=Mono_nonclassical: 1.40 vote=Macrophage(51%) n=372
+cluster 13: pDC              z1=pDC: 1.48 z2=Mono_nonclassical: 0.42 vote=Macrophage(48%) n=61
+cluster 14: Macrophage       z1=Macrophage: 0.68 z2=Mono_nonclassical: 0.38 vote=Macrophage(69%) n=627
+cluster 15: Macrophage       z1=Macrophage: 0.25 z2=Mono_classical: 0.20 vote=Macrophage(65%) n=770
+cluster 16: Macrophage       z1=Macrophage: 1.78 z2=Mono_nonclassical: 0.16 vote=Macrophage(98%) n=1535
+cluster 17: Mono_classical   z1=Mono_classical: 2.71 z2=Neutrophil: 0.56 vote=Mono_classical(53%) n=959
+cluster 18: pDC              z1=pDC: 1.32 z2=Mono_classical: 0.38 vote=Mono_classical(42%) n=89
+cluster 19: pDC              z1=pDC: 2.68 z2=cDC1: 0.52 vote=pDC(37%) n=73
+cluster 20: Mono_nonclassical z1=Mono_nonclassical: 0.78 z2=cDC1: 0.66 vote=Macrophage(42%) n=77
+cluster 21: cDC2             z1=cDC2: 3.75 z2=pDC: 0.35 vote=cDC2(100%) n=6

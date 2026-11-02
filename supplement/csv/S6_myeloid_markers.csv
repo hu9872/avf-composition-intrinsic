@@ -1,0 +1,7 @@
+State,Cells,CD1C (mean log-norm),CLEC10A (mean log-norm),FCER1A (mean log-norm),C1QA (mean log-norm),CD14 (mean log-norm),FCGR3A (mean log-norm),CLEC9A (mean log-norm),XCR1 (mean log-norm),LILRA4 (mean log-norm),TPSAB1 (mean log-norm)
+Macrophage,11937,0.046,0.273,0.156,2.3,1.438,1.292,0.052,0.001,0.008,0.029
+Mono_classical,1578,0.012,0.146,0.021,1.93,1.833,1.808,0.007,0.008,0.006,0.01
+cDC2,1158,0.79,1.016,1.105,0.932,0.697,0.577,0.085,0.023,0.007,0.012
+Low_quality,89,0.015,0.026,0.0,0.221,0.137,0.134,0.0,0.024,0.0,0.039
+pDC,73,0.166,0.0,0.129,0.181,0.036,0.058,0.0,0.0,0.215,0.0
+Neutrophil,10,0.0,0.0,0.0,0.219,0.28,0.0,0.0,0.0,0.0,0.0

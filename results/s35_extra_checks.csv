@@ -1,0 +1,18 @@
+metric,failed_mean,mature_mean,cohens_d,welch_p,n_failed,n_mature,note
+"cDC2 per 1,000 (two smallest donors dropped)",17.653,15.835,0.15,0.8098,6,4,dropped M4;M2
+"Myeloid per 1,000 (two smallest donors dropped)",262.374,166.975,1.053,0.1106,6,4,dropped M4;M2
+"CD1C detection within cDC2, raw (donor mean, %)",44.7,61.4,-0.978,0.1254,6,6,before depth control
+"CD1C detection within cDC2, raw (pooled cells, %)",41.9,62.8,,,394,298,"cell-level pooling, descriptive only"
+CD1C-low C1QA+ state frequency (CLR),0.679,0.104,0.748,0.2258,6,6,state 3 of the cDC2 re-embedding
+"CD1C detection (%), downsampled (donor mean)",31.25,48.11,-0.997,0.1259,6,6,s5e_cdc2_downsampled_detection
+"CLEC10A detection (%), downsampled (donor mean)",39.59,57.44,-1.115,0.0955,6,6,s5e_cdc2_downsampled_detection
+"FCER1A detection (%), downsampled (donor mean)",46.47,55.02,-0.396,0.5123,6,6,s5e_cdc2_downsampled_detection
+"CD1E detection (%), downsampled (donor mean)",22.62,25.11,-0.159,0.7887,6,6,s5e_cdc2_downsampled_detection
+"RPL13A detection (%), downsampled (donor mean)",99.48,100.0,-0.764,0.2429,6,6,s5e_cdc2_downsampled_detection
+"ACTB detection (%), downsampled (donor mean)",98.31,100.0,-0.698,0.2805,6,6,s5e_cdc2_downsampled_detection
+"CD1C counts per 10,000, downsampled (donor mean)",1.8,3.23,-1.012,0.1301,6,6,s5e_cdc2_downsampled_cpm
+"CLEC10A counts per 10,000, downsampled (donor mean)",2.22,3.18,-0.709,0.2619,6,6,s5e_cdc2_downsampled_cpm
+"FCER1A counts per 10,000, downsampled (donor mean)",3.93,6.1,-0.746,0.2396,6,6,s5e_cdc2_downsampled_cpm
+"CD1E counts per 10,000, downsampled (donor mean)",0.98,0.96,0.042,0.9439,6,6,s5e_cdc2_downsampled_cpm
+"RPL13A counts per 10,000, downsampled (donor mean)",26.47,22.7,1.035,0.1051,6,6,s5e_cdc2_downsampled_cpm
+"ACTB counts per 10,000, downsampled (donor mean)",24.83,36.81,-0.969,0.1443,6,6,s5e_cdc2_downsampled_cpm

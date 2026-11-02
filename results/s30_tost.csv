@@ -1,0 +1,15 @@
+metric,diff,cohens_d,welch_p,equivalence_bound,ci90_low,ci90_high,tost_p,equivalent_at_d080,excluded_effect_from_d,detectable_d_at_n6,n_failed,n_mature
+Myofibroblast abundance (CLR),0.1208,0.124,0.836,0.7804,-0.9,1.1417,0.1344,False,1.17,1.796,6,6
+Resident AF abundance (CLR),0.2125,0.19,0.7495,0.8955,-0.9589,1.3839,0.1577,False,1.236,1.796,6,6
+Pericyte abundance (CLR),-0.9434,-1.186,0.0685,0.6366,-1.7761,-0.1107,0.7403,False,2.232,1.796,6,6
+Myofibroblast fate absorption,-0.054,-0.753,0.2336,0.0574,-0.1291,0.021,0.4687,False,1.8,1.796,6,6
+Contractile SMC fate absorption,0.0509,0.42,0.4902,0.0969,-0.0759,0.1777,0.2628,False,1.467,1.796,6,6
+Resident AF fate absorption,0.0719,0.437,0.4671,0.1318,-0.1005,0.2443,0.2716,False,1.483,1.796,6,6
+Matrisome programme ECM1,-0.0142,-0.645,0.2907,0.0176,-0.0372,0.0088,0.3967,False,1.691,1.796,6,6
+Matrisome programme ECM2,0.0004,0.007,0.9903,0.0446,-0.0579,0.0587,0.0999,False,1.054,1.796,6,6
+Matrisome programme ECM3,0.0162,0.185,0.7559,0.0701,-0.0755,0.1079,0.156,False,1.232,1.796,6,6
+Matrisome programme ECM4,0.017,0.203,0.732,0.067,-0.0706,0.1046,0.1629,False,1.25,1.796,6,6
+Matrisome programme ECM5,0.0748,0.508,0.4051,0.1177,-0.0792,0.2287,0.3121,False,1.555,1.796,6,6
+Zonation index,0.0149,0.013,0.9821,0.8971,-1.1585,1.1884,0.1015,False,1.06,1.796,6,6
+"Myeloid cells per 1,000 (positive control)",116.86,1.375,0.0437,68.0052,27.907,205.813,0.8285,False,2.421,1.796,6,6
+"cDC2 cells per 1,000",1.3102,0.119,0.842,8.826,-10.2344,12.8548,0.1327,False,1.165,1.796,6,6

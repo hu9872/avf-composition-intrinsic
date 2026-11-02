@@ -1,0 +1,37 @@
+{
+  "n_genes_tested": 30,
+  "retained_primary": 19,
+  "retained_permissive": 21,
+  "retained_strict": 7,
+  "retained_very_strict": 5,
+  "floor_counts": {
+    "0.05": 13,
+    "0.1": 9,
+    "0.15": 8
+  },
+  "stable_across_rules": [
+    "ACE",
+    "CCL3L1",
+    "MT1X",
+    "RND1",
+    "SLC16A10"
+  ],
+  "unstable_genes": [
+    "AC119673.2",
+    "AC135782.1",
+    "ANKRD55",
+    "APOBEC3A",
+    "CBFA2T3",
+    "CCL2",
+    "CD1C",
+    "CHN2",
+    "GREM2",
+    "MOBP",
+    "NR4A2",
+    "OR11G2",
+    "PLAUR",
+    "RETREG1",
+    "TIFAB",
+    "YEATS4"
+  ]
+}

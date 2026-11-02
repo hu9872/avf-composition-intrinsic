@@ -1,0 +1,426 @@
+{
+  "labels": {
+    "0": "Macrophage",
+    "1": "Mono_classical",
+    "2": "Macrophage",
+    "3": "cDC1",
+    "4": "cDC2",
+    "5": "Mono_classical",
+    "6": "Macrophage",
+    "7": "cDC1",
+    "8": "Mast",
+    "9": "Mast",
+    "10": "Neutrophil",
+    "11": "Mono_nonclassical",
+    "12": "cDC1",
+    "13": "pDC",
+    "14": "Macrophage",
+    "15": "Macrophage",
+    "16": "Macrophage",
+    "17": "Mono_classical",
+    "18": "pDC",
+    "19": "pDC",
+    "20": "Mono_nonclassical",
+    "21": "cDC2"
+  },
+  "decision": {
+    "0": {
+      "assigned": "Macrophage",
+      "z_max": 2.32,
+      "z_runner": 0.3,
+      "z_by_panel": {
+        "Macrophage": 2.32,
+        "Mono_nonclassical": 0.3,
+        "cDC1": -0.3,
+        "cDC2": -0.34,
+        "Mast": -0.42,
+        "Mono_classical": -0.47,
+        "pDC": -0.65,
+        "Neutrophil": -0.86
+      },
+      "majority_call": "Macrophage",
+      "majority_agreement": 0.995,
+      "n": 842
+    },
+    "1": {
+      "assigned": "Mono_classical",
+      "z_max": 1.4,
+      "z_runner": 1.25,
+      "z_by_panel": {
+        "Mono_classical": 1.4,
+        "Neutrophil": 1.25,
+        "Mono_nonclassical": 0.56,
+        "Macrophage": 0.44,
+        "Mast": -0.13,
+        "cDC2": -0.48,
+        "cDC1": -0.53,
+        "pDC": -0.93
+      },
+      "majority_call": "Macrophage",
+      "majority_agreement": 0.687,
+      "n": 619
+    },
+    "2": {
+      "assigned": "Macrophage",
+      "z_max": 1.24,
+      "z_runner": 0.65,
+      "z_by_panel": {
+        "Macrophage": 1.24,
+        "Mono_nonclassical": 0.65,
+        "cDC1": 0.38,
+        "pDC": 0.03,
+        "Neutrophil": -0.22,
+        "cDC2": -0.27,
+        "Mast": -0.3,
+        "Mono_classical": -0.4
+      },
+      "majority_call": "Macrophage",
+      "majority_agreement": 0.809,
+      "n": 2052
+    },
+    "3": {
+      "assigned": "cDC1",
+      "z_max": 1.29,
+      "z_runner": 0.9,
+      "z_by_panel": {
+        "cDC1": 1.29,
+        "Mono_nonclassical": 0.9,
+        "pDC": 0.29,
+        "Macrophage": 0.26,
+        "Neutrophil": 0.03,
+        "cDC2": -0.08,
+        "Mono_classical": -0.26,
+        "Mast": -0.34
+      },
+      "majority_call": "Macrophage",
+      "majority_agreement": 0.517,
+      "n": 1200
+    },
+    "4": {
+      "assigned": "cDC2",
+      "z_max": 2.1,
+      "z_runner": 1.27,
+      "z_by_panel": {
+        "cDC2": 2.1,
+        "cDC1": 1.27,
+        "pDC": -0.16,
+        "Neutrophil": -0.21,
+        "Mast": -0.24,
+        "Mono_classical": -0.29,
+        "Mono_nonclassical": -0.61,
+        "Macrophage": -0.88
+      },
+      "majority_call": "cDC2",
+      "majority_agreement": 0.52,
+      "n": 1152
+    },
+    "5": {
+      "assigned": "Mono_classical",
+      "z_max": 1.23,
+      "z_runner": 0.79,
+      "z_by_panel": {
+        "Mono_classical": 1.23,
+        "Neutrophil": 0.79,
+        "cDC2": 0.35,
+        "Mast": 0.18,
+        "cDC1": -0.08,
+        "Mono_nonclassical": -0.12,
+        "pDC": -0.4,
+        "Macrophage": -0.63
+      },
+      "majority_call": "Mono_classical",
+      "majority_agreement": 0.382,
+      "n": 670
+    },
+    "6": {
+      "assigned": "Macrophage",
+      "z_max": 0.61,
+      "z_runner": -0.15,
+      "z_by_panel": {
+        "Macrophage": 0.61,
+        "Mono_classical": -0.15,
+        "Mono_nonclassical": -0.25,
+        "Mast": -0.31,
+        "cDC2": -0.33,
+        "cDC1": -0.48,
+        "Neutrophil": -0.73,
+        "pDC": -0.91
+      },
+      "majority_call": "Macrophage",
+      "majority_agreement": 0.791,
+      "n": 470
+    },
+    "7": {
+      "assigned": "cDC1",
+      "z_max": 1.52,
+      "z_runner": 1.17,
+      "z_by_panel": {
+        "cDC1": 1.52,
+        "Neutrophil": 1.17,
+        "Mono_nonclassical": 0.86,
+        "pDC": 0.18,
+        "Macrophage": -0.09,
+        "Mast": -0.38,
+        "cDC2": -0.38,
+        "Mono_classical": -0.74
+      },
+      "majority_call": "Macrophage",
+      "majority_agreement": 0.491,
+      "n": 2062
+    },
+    "8": {
+      "assigned": "Mast",
+      "z_max": 3.44,
+      "z_runner": 0.39,
+      "z_by_panel": {
+        "Mast": 3.44,
+        "Mono_classical": 0.39,
+        "Neutrophil": -0.19,
+        "Macrophage": -0.37,
+        "cDC2": -0.38,
+        "pDC": -0.47,
+        "Mono_nonclassical": -0.55,
+        "cDC1": -0.91
+      },
+      "majority_call": "Macrophage",
+      "majority_agreement": 0.396,
+      "n": 850
+    },
+    "9": {
+      "assigned": "Mast",
+      "z_max": 2.55,
+      "z_runner": 0.46,
+      "z_by_panel": {
+        "Mast": 2.55,
+        "pDC": 0.46,
+        "Neutrophil": 0.04,
+        "Mono_classical": -0.05,
+        "Mono_nonclassical": -0.05,
+        "cDC2": -0.24,
+        "Macrophage": -0.34,
+        "cDC1": -0.62
+      },
+      "majority_call": "Macrophage",
+      "majority_agreement": 0.388,
+      "n": 255
+    },
+    "10": {
+      "assigned": "Neutrophil",
+      "z_max": 2.5,
+      "z_runner": 1.54,
+      "z_by_panel": {
+        "Neutrophil": 2.5,
+        "Mono_classical": 1.54,
+        "cDC2": -0.56,
+        "Mast": -0.86,
+        "Macrophage": -1.29,
+        "pDC": -1.54,
+        "Mono_nonclassical": -1.6,
+        "cDC1": -2.07
+      },
+      "majority_call": "Mono_classical",
+      "majority_agreement": 0.6,
+      "n": 10
+    },
+    "11": {
+      "assigned": "Mono_nonclassical",
+      "z_max": 1.9,
+      "z_runner": 0.95,
+      "z_by_panel": {
+        "Mono_nonclassical": 1.9,
+        "cDC1": 0.95,
+        "pDC": 0.8,
+        "Macrophage": 0.59,
+        "Neutrophil": 0.47,
+        "Mast": -0.25,
+        "cDC2": -0.29,
+        "Mono_classical": -0.34
+      },
+      "majority_call": "Macrophage",
+      "majority_agreement": 0.585,
+      "n": 94
+    },
+    "12": {
+      "assigned": "cDC1",
+      "z_max": 2.04,
+      "z_runner": 1.4,
+      "z_by_panel": {
+        "cDC1": 2.04,
+        "Mono_nonclassical": 1.4,
+        "Neutrophil": 1.14,
+        "pDC": 0.39,
+        "Macrophage": 0.25,
+        "cDC2": -0.43,
+        "Mast": -0.45,
+        "Mono_classical": -0.45
+      },
+      "majority_call": "Macrophage",
+      "majority_agreement": 0.508,
+      "n": 372
+    },
+    "13": {
+      "assigned": "pDC",
+      "z_max": 1.48,
+      "z_runner": 0.42,
+      "z_by_panel": {
+        "pDC": 1.48,
+        "Mono_nonclassical": 0.42,
+        "cDC2": -0.0,
+        "Macrophage": -0.13,
+        "cDC1": -0.31,
+        "Mast": -0.33,
+        "Neutrophil": -0.38,
+        "Mono_classical": -0.68
+      },
+      "majority_call": "Macrophage",
+      "majority_agreement": 0.475,
+      "n": 61
+    },
+    "14": {
+      "assigned": "Macrophage",
+      "z_max": 0.68,
+      "z_runner": 0.38,
+      "z_by_panel": {
+        "Macrophage": 0.68,
+        "Mono_nonclassical": 0.38,
+        "cDC1": 0.33,
+        "cDC2": -0.02,
+        "Mast": -0.13,
+        "Mono_classical": -0.16,
+        "Neutrophil": -0.21,
+        "pDC": -0.42
+      },
+      "majority_call": "Macrophage",
+      "majority_agreement": 0.686,
+      "n": 627
+    },
+    "15": {
+      "assigned": "Macrophage",
+      "z_max": 0.25,
+      "z_runner": 0.2,
+      "z_by_panel": {
+        "Macrophage": 0.25,
+        "Mono_classical": 0.2,
+        "cDC2": -0.37,
+        "Mast": -0.38,
+        "cDC1": -0.46,
+        "Mono_nonclassical": -0.87,
+        "pDC": -1.28,
+        "Neutrophil": -1.44
+      },
+      "majority_call": "Macrophage",
+      "majority_agreement": 0.655,
+      "n": 770
+    },
+    "16": {
+      "assigned": "Macrophage",
+      "z_max": 1.78,
+      "z_runner": 0.16,
+      "z_by_panel": {
+        "Macrophage": 1.78,
+        "Mono_nonclassical": 0.16,
+        "Neutrophil": -0.13,
+        "Mast": -0.24,
+        "pDC": -0.38,
+        "cDC1": -0.4,
+        "cDC2": -0.43,
+        "Mono_classical": -0.57
+      },
+      "majority_call": "Macrophage",
+      "majority_agreement": 0.981,
+      "n": 1535
+    },
+    "17": {
+      "assigned": "Mono_classical",
+      "z_max": 2.71,
+      "z_runner": 0.56,
+      "z_by_panel": {
+        "Mono_classical": 2.71,
+        "Neutrophil": 0.56,
+        "Mono_nonclassical": 0.11,
+        "Macrophage": -0.0,
+        "Mast": -0.23,
+        "cDC2": -0.49,
+        "cDC1": -0.59,
+        "pDC": -1.26
+      },
+      "majority_call": "Mono_classical",
+      "majority_agreement": 0.534,
+      "n": 959
+    },
+    "18": {
+      "assigned": "pDC",
+      "z_max": 1.32,
+      "z_runner": 0.38,
+      "z_by_panel": {
+        "pDC": 1.32,
+        "Mono_classical": 0.38,
+        "Mast": -0.39,
+        "Mono_nonclassical": -0.42,
+        "cDC2": -0.47,
+        "cDC1": -1.07,
+        "Macrophage": -1.15,
+        "Neutrophil": -1.21
+      },
+      "majority_call": "Mono_classical",
+      "majority_agreement": 0.416,
+      "n": 89
+    },
+    "19": {
+      "assigned": "pDC",
+      "z_max": 2.68,
+      "z_runner": 0.52,
+      "z_by_panel": {
+        "pDC": 2.68,
+        "cDC1": 0.52,
+        "cDC2": -0.27,
+        "Mast": -0.46,
+        "Macrophage": -1.46,
+        "Neutrophil": -1.55,
+        "Mono_classical": -2.04,
+        "Mono_nonclassical": -2.14
+      },
+      "majority_call": "pDC",
+      "majority_agreement": 0.37,
+      "n": 73
+    },
+    "20": {
+      "assigned": "Mono_nonclassical",
+      "z_max": 0.78,
+      "z_runner": 0.66,
+      "z_by_panel": {
+        "Mono_nonclassical": 0.78,
+        "cDC1": 0.66,
+        "Neutrophil": 0.44,
+        "pDC": 0.44,
+        "Mast": 0.06,
+        "cDC2": -0.36,
+        "Macrophage": -0.45,
+        "Mono_classical": -1.02
+      },
+      "majority_call": "Macrophage",
+      "majority_agreement": 0.416,
+      "n": 77
+    },
+    "21": {
+      "assigned": "cDC2",
+      "z_max": 3.75,
+      "z_runner": 0.35,
+      "z_by_panel": {
+        "cDC2": 3.75,
+        "pDC": 0.35,
+        "Mono_classical": -0.22,
+        "Mast": -0.39,
+        "cDC1": -1.14,
+        "Neutrophil": -1.27,
+        "Macrophage": -1.61,
+        "Mono_nonclassical": -1.8
+      },
+      "majority_call": "cDC2",
+      "majority_agreement": 1.0,
+      "n": 6
+    }
+  },
+  "cdc2_free_threshold": -0.2874999999999999,
+  "n_myeloid": 14845
+}

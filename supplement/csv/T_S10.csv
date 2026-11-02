@@ -1,0 +1,20 @@
+Compartment,Gene,log2FC,Mean in target,Interpretable at 0.05,at 0.10,at 0.15
+Endothelial,ACE,-1.703,0.189,True,True,True
+Endothelial,RND1,-1.686,0.183,True,True,True
+Endothelial,RETREG1,2.095,0.059,True,False,False
+Endothelial,MOBP,3.202,0.058,True,False,False
+Endothelial,AC119673.2,-4.835,0.026,False,False,False
+Fib_Myofibroblast,MT1X,3.454,0.523,True,True,True
+Fib_Pericyte,NR4A2,-2.021,0.584,True,True,True
+Fib_SMC_contractile,GREM2,-4.33,0.037,False,False,False
+Mast,PLAUR,-1.302,0.861,True,True,True
+Mast,CCL2,-3.031,0.464,True,True,True
+Myeloid,CCL3L1,2.123,2.009,True,True,True
+Myeloid,SLC16A10,1.395,0.679,True,True,True
+Myeloid,CD1C,-1.905,0.101,True,True,False
+Myeloid,YEATS4,0.783,0.097,True,False,False
+Myeloid,CHN2,-1.495,0.062,True,False,False
+Myeloid,APOBEC3A,-2.623,0.047,False,False,False
+Myeloid,TIFAB,-2.393,0.006,False,False,False
+T_cell,OR11G2,-4.132,0.026,False,False,False
+T_cell,ANKRD55,3.435,0.017,False,False,False

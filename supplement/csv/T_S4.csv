@@ -1,0 +1,4 @@
+fate,failed,mature,diff,cohens_d,welch_p,mwu_p,n_failed,n_mature,fdr
+Myofibroblast,0.1166,0.1706,-0.054,-0.7535,0.2336,0.3939,6,6,0.4902
+SMC_contractile,0.2785,0.2275,0.0509,0.4202,0.4902,0.8182,6,6,0.4902
+AF_resident,0.352,0.2801,0.0719,0.4366,0.4671,0.4848,6,6,0.4902

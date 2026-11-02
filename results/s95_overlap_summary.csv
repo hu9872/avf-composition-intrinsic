@@ -1,0 +1,6 @@
+source,label,src_words,matched_shingles,manuscript_shingles,containment_pct,longest_run_words,note
+ref12,Martinez 2026 Kidney Int（本文数据集 GSE305423 原始单细胞论文）,5032,0,7580,0.0,0,0 段含 ≥8 词重合
+ref08,Martinez 2023 Kidney Int Rep（GSE220796 原始 bulk 论文；仅取到 PMC 摘要）,596,0,7580,0.0,0,0 段含 ≥8 词重合
+abs_10.1016_j.kint.2025.08.024,ref12 摘要（Elsevier/PubMed 官方摘要）,276,0,7580,0.0,0,0 段含 ≥8 词重合
+abs_10.1016_j.ekir.2023.01.008,ref8 摘要（Elsevier/PubMed 官方摘要）,249,0,7580,0.0,0,0 段含 ≥8 词重合
+self_v7,本人未发表前稿（文本回收自查）,6919,3700,7580,48.81,215,71 段含 ≥8 词重合；最高单段 100%

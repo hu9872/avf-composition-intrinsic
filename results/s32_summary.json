@@ -1,0 +1,39 @@
+{
+  "scales": {
+    "0.8": {
+      "n_cdc2": 1828,
+      "d": 0.592,
+      "p": 0.3306
+    },
+    "1.0": {
+      "n_cdc2": 1158,
+      "d": 0.119,
+      "p": 0.842
+    },
+    "1.2": {
+      "n_cdc2": 1158,
+      "d": 0.119,
+      "p": 0.842
+    }
+  },
+  "conclusion_stable": true,
+  "sex_by_group": {
+    "Female": {
+      "early_AVF": 1,
+      "failed_AVF": 5,
+      "mature_AVF": 4,
+      "pre_access": 4
+    },
+    "Male": {
+      "early_AVF": 1,
+      "failed_AVF": 1,
+      "mature_AVF": 2,
+      "pre_access": 2
+    }
+  },
+  "age_range": [
+    28.0,
+    72.0
+  ],
+  "n_donors": 20
+}
