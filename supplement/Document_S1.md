@@ -118,6 +118,8 @@ Deconvolution of the bulk cohort against a same-tissue single-cell reference was
 
 Python 3.13.14; scanpy 1.12.5; anndata 0.13.4; numpy 2.5.4; pandas 3.1.0; scipy 1.18.1; scikit-learn 1.9.1; statsmodels 0.15.0; PyDESeq2 0.5.4; harmonypy 0.0.9; leidenalg 0.12.0; igraph 1.0.0; matplotlib 3.11.2. Random seed 2611 throughout. Scripts are numbered in execution order and results are written one table per step, so that each number in the main text traces to a file. The environment is pinned in environment.yml in the code archive.
 
+Analysis scripts were drafted and refactored with an AI assistant (WorkBuddy; see the AI declaration in the main text). Each script was then executed by the authors in the environment above, and no reported value rests on the tool's output: an assertion script (code/90_verify_numbers.py) recomputes all 48 numerical claims in the main text from results/ and is run before submission.
+
 ---
 
 ## Figure legends
