@@ -47,11 +47,11 @@ Everything a reader needs to check a specific claim is either small and included
 | Figure | Plot data |
 |---|---|
 | Fig 1 atlas | `plot_atlas.csv` |
-| Fig 2 subclusters | `plot_fibro.csv`, `s4_subcluster_annotation.csv` |
+| Fig 2 subclusters | `plot_fibro.csv`, `plot_fibro_programmes.csv`, `s5_pseudobulk_de.csv`, `s4_subcluster_annotation.csv` |
 | Fig 3 composition | `s5_subtype_fraction_plot.csv` |
-| Fig 4 trajectory | `plot_traj_umap.csv`, `plot_paga.csv`, `s7_fate_tests.csv` |
-| Fig 5 communication | `s8c_pathway_tests.csv` |
-| Fig 6 compartments | `s5g_gene_compartment_gene_screen.csv` |
+| Fig 4 trajectory | `plot_traj_umap.csv`, `plot_paga.csv`, `plot_paga_pos.csv`, `s7_fate_tests.csv`, `s7_donor_fate.csv`, `s7_gene_trend.csv` |
+| Fig 5 communication | `s8c_pathway_tests.csv`, `s8_lr_tests.csv` |
+| Fig 6 compartments | `s5g_compartment_counts_before_after.csv`, `s9_ecm_tests.csv` |
 | Fig 7 myeloid / cDC2 | `plot_myeloid.csv`, `s5e_abundance_tests.csv` |
 | Fig 8 decomposition | `s5f_decomposition_retained.csv` |
-| Fig S1–S3 | `s5g_compartment_genes.csv`, `s30_power_curve.csv`, `s34_compartment_score_tests.csv` |
+| Fig S1–S3 | `s5g_compartment_gene_screen.csv`, `s30_power_curve.csv`, `s34_compartment_score_tests.csv` |

@@ -6,7 +6,7 @@ Target: from a clean machine to every number in the manuscript, with no manual e
 
 - Linux / macOS / Windows (WSL recommended on Windows)
 - 16 cores, **64 GB RAM**, 60 GB free disk (23 GB data + intermediates)
-- conda or mamba
+- conda or mamba, **or** Python 3.13 with `pip` (see § 1)
 - Network access to `ftp.ncbi.nlm.nih.gov`
 
 ## 1. Environment
@@ -26,6 +26,14 @@ If conda's solver struggles with `pydeseq2`, install it separately:
 pip install pydeseq2==0.5.4
 ```
 
+**No conda.** `requirements.txt` pins exactly the same versions, so a plain virtual
+environment is equivalent and was used to re-run the whole pipeline end to end:
+
+```bash
+python3.13 -m venv .venv
+.venv/Scripts/python.exe -m pip install -r requirements.txt   # Linux/macOS: .venv/bin/python
+```
+
 ## 2. Point the pipeline at your checkout
 
 The scripts were developed with an absolute Windows root (`D:/AVF_GSE_2611`). Rewrite it once:
@@ -42,12 +50,12 @@ To undo, run the same command with `--to "D:/AVF_GSE_2611"`.
 
 ```bash
 python code/00_download.py     # ~23 GB, 30–90 min depending on link
-python code/01_prepare.py      # unpacks 10x triplets → data/processed/01_prepared.h5ad
+python code/01_prepare.py      # unpacks 10x triplets → data/processed/01_raw_concat.h5ad
 ```
 
 Expected after step 3: `data/raw/` holds the GEO supplementary files;
-`data/processed/` holds the AnnData objects and `results/s2_cells_per_sample.csv` shows 12
-post-operative samples.
+`data/processed/` holds the AnnData objects and `data/processed/sample_manifest.csv` lists the 12
+post-operative samples (6 failed, 6 matured).
 
 ## 4. Analysis
 

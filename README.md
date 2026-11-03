@@ -17,7 +17,7 @@ Everything needed to reproduce the numbers, figures and tables in the manuscript
 | `code/` | Analysis pipeline, figure builders, document builders, and the numeric-provenance assertion script |
 | `results/` | Every result table cited in the article (large intermediate marker tables excluded — see `docs/RESULTS_INDEX.md`) |
 | `figures/` | Main figures 1–8, supplementary figures S1–S3 and the graphical abstract (PDF + 300 dpi PNG) |
-| `manuscript/` | Manuscript source and the two in-house checking scripts output it is validated against |
+| `manuscript/` | Manuscript source (Markdown) and the submission checklist the package is checked against before upload |
 | `docs/` | How to reproduce, where the data come from, which file backs which claim |
 | `data/` | **Not included** (23 GB). Download instructions in `data/README.md` |
 

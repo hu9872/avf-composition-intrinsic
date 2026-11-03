@@ -25,7 +25,8 @@ authors:
   - family-names: "Hu"
     given-names: "Daijun"
     affiliation: "Department of Nephrology, Chongqing University Three Gorges Hospital, 165 Xincheng Road, Wanzhou District, Chongqing 404000, China"
-    # 有 ORCID 才取消下面一行注释，填完整 19 位；没有就保持注释状态，不要留空壳占位
+    # Add an ORCID iD here when one is available; leave the line out rather
+    # than leaving an empty placeholder.
     # orcid: "https://orcid.org/0000-0000-0000-0000"
 preferred-citation:
   type: article
@@ -37,4 +38,5 @@ preferred-citation:
       given-names: "Daijun"
   journal: "iScience"
   year: 2026
-  # 文章被接收后再补 volume/pages/doi；在此之前 Zenodo 记录以 software 类型为准
+  # volume/pages/doi are added after acceptance; until then the archived record
+  # is of type software and the preferred citation is the Zenodo release.

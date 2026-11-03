@@ -246,19 +246,32 @@ log2FC, log2 fold change. Predicted = composition + intrinsic; residual = observ
 
 ## STAR Methods
 
-### Resource availability
+### Key resources table
 
-#### Lead contact
-
-Further information and requests should be directed to and will be fulfilled by the lead contact, Daijun Hu (283624940@qq.com).
-
-#### Materials availability
-
-This study did not generate new materials.
-
-#### Data and code availability
-
-Public datasets are listed in the key resources table and in Resource availability above. Analysis code is deposited at https://github.com/hu9872/avf-composition-intrinsic.git and archived at Zenodo under the concept DOI https://doi.org/10.5281/zenodo.23887195, which always resolves to the most recent released version. No accession numbers are restricted.
+| Reagent or resource | Source | Identifier |
+|---|---|---|
+| Deposited data | | |
+| Human AVF single-cell RNA-seq, 21 libraries, 20 patients | Martinez et al. [[12]] | GEO: GSE305423 |
+| Human vein and AVF bulk RNA-seq, paired | Martinez et al. [[8]] | GEO: GSE220796 |
+| Human vein and AVF bulk RNA-seq | Vazquez-Padron laboratory | GEO: GSE119296 |
+| HGNC gene symbols | HGNC | https://www.genenames.org |
+| Software and algorithms | | |
+| scanpy 1.12.5 | Wolf et al. [[14]] | RRID:SCR_018139 |
+| anndata 0.13.4 | scverse | https://anndata.readthedocs.io |
+| Scrublet | Wolock et al. [[15]] | RRID:SCR_018098 |
+| Harmony | Korsunsky et al. [[16]] | https://github.com/immunogenomics/harmony |
+| PAGA | Wolf et al. [[22]] | RRID:SCR_018138 |
+| Diffusion pseudotime | Haghverdi et al. [[23]] | RRID:SCR_018138 |
+| CellRank | Lange et al. [[24]] | https://cellrank.readthedocs.io |
+| CellPhoneDB v2 | Efremova et al. [[25]] | RRID:SCR_017054 |
+| PyDESeq2 0.5.4 | Muzellec et al. [[20]] | https://github.com/scverse/pydeseq2 |
+| DESeq2 (reference implementation) | Love et al. [[19]] | RRID:SCR_000154 |
+| scikit-learn NMF | Pedregosa et al. | RRID:SCR_002577 |
+| SciPy 1.18.1 | Virtanen et al. | RRID:SCR_008058 |
+| NumPy 2.5.4 | Harris et al. | RRID:SCR_008633 |
+| pandas 3.1.0 | McKinney | RRID:SCR_018214 |
+| Matplotlib 3.11.2 | Hunter | RRID:SCR_008624 |
+| Analysis code, release v1.0.1 (Zenodo concept DOI 10.5281/zenodo.23887195) | This paper | https://github.com/hu9872/avf-composition-intrinsic.git; https://doi.org/10.5281/zenodo.23887195 |
 
 ### Experimental model and study participant details
 
@@ -325,33 +338,6 @@ Software: Python 3.13.14, scanpy 1.12.5, anndata 0.13.4, numpy 2.5.4, pandas 3.1
 ### Additional resources
 
 The analysis plan, including the three pre-specified hypotheses and the decision rule for the appended cDC2 hypothesis, was written before the corresponding analyses were run. The study was not prospectively registered in a public registry; no registration number exists. The code repository doubles as the record of analysis order.
-
-### Key resources table
-
-| Reagent or resource | Source | Identifier |
-|---|---|---|
-| Deposited data | | |
-| Human AVF single-cell RNA-seq, 21 libraries, 20 patients | Martinez et al. [[12]] | GEO: GSE305423 |
-| Human vein and AVF bulk RNA-seq, paired | Martinez et al. [[8]] | GEO: GSE220796 |
-| Human vein and AVF bulk RNA-seq | Vazquez-Padron laboratory | GEO: GSE119296 |
-| HGNC gene symbols | HGNC | https://www.genenames.org |
-| Software and algorithms | | |
-| scanpy 1.12.5 | Wolf et al. [[14]] | RRID:SCR_018139 |
-| anndata 0.13.4 | scverse | https://anndata.readthedocs.io |
-| Scrublet | Wolock et al. [[15]] | RRID:SCR_018098 |
-| Harmony | Korsunsky et al. [[16]] | https://github.com/immunogenomics/harmony |
-| PAGA | Wolf et al. [[22]] | RRID:SCR_018138 |
-| Diffusion pseudotime | Haghverdi et al. [[23]] | RRID:SCR_018138 |
-| CellRank | Lange et al. [[24]] | https://cellrank.readthedocs.io |
-| CellPhoneDB v2 | Efremova et al. [[25]] | RRID:SCR_017054 |
-| PyDESeq2 0.5.4 | Muzellec et al. [[20]] | https://github.com/scverse/pydeseq2 |
-| DESeq2 (reference implementation) | Love et al. [[19]] | RRID:SCR_000154 |
-| scikit-learn NMF | Pedregosa et al. | RRID:SCR_002577 |
-| SciPy 1.18.1 | Virtanen et al. | RRID:SCR_008058 |
-| NumPy 2.5.4 | Harris et al. | RRID:SCR_008633 |
-| pandas 3.1.0 | McKinney | RRID:SCR_018214 |
-| Matplotlib 3.11.2 | Hunter | RRID:SCR_008624 |
-| Analysis code, release v1.0.1 (Zenodo concept DOI 10.5281/zenodo.23887195) | This paper | https://github.com/hu9872/avf-composition-intrinsic.git; https://doi.org/10.5281/zenodo.23887195 |
 
 ## Resource identification initiative
 

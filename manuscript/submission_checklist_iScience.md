@@ -40,7 +40,7 @@
 | # | 项目 | 刊方标准 | 实测 | 状态 |
 |---|---|---|---|---|
 | C1 | 位置 | 图注与表格之后、文献之前 | 一致 | ✅ |
-| C2 | 结构 | 四标题齐全 | Resource availability / Experimental model / Method details / Quantification and statistical analysis | ✅ |
+| C2 | 结构 | STAR Methods 四段 | Key resources table / Experimental model / Method details / Quantification and statistical analysis；Resource availability 只在正文出现一次（iScience 版式，已删 STAR Methods 内重复节） | ✅ |
 | C3 | Key Resources Table | 每项 source + identifier | 含 GEO 号、软件版本、RRID | ✅ |
 | C4 | Data and code availability | GEO + 仓库 + DOI | 3 个 GEO + GitHub + concept DOI `10.5281/zenodo.23887195` | ✅ |
 | C5 | 统计节集中化 | 检验/n/误差/校正/版本 | 已集中，含把握度与 TOST | ✅ |
@@ -52,7 +52,7 @@
 | # | 项目 | 刊方标准 | 实测 | 状态 |
 |---|---|---|---|---|
 | D1 | 伦理 | 委员会或豁免依据 | 公开去标识数据、无需审批，已写明 | ✅ |
-| D2 | Declaration of interests | 独立节 + **官方表 PDF** | 章节已写；官方表需在 EM 内下载、签字后随稿上传 | ⚠️ D2 |
+| D2 | Declaration of interests | 独立节 + **官方表 PDF** | 章节已写；官方表（3 页 10 勾选 + 1 文字框，无签名栏）已按实际情况填好并另存 PDF，随稿上传，不随代码包发布 | ✅ |
 | D3 | 生成式 AI 声明 | 官方章节名 + 工具具名 | 官方标题；按 Elsevier 2026-06 政策写明工具名 WorkBuddy、用途（代码起草与重构、语言润色）与作者把关；Document S1 的 S13 另有一段 Methods 说明（AI 参与研究过程的要求） | ✅ |
 | D4 | 二次分析声明 | 封面信 + 正文 | 已明确 secondary analysis、非重复发表 | ✅ |
 | D5 | 查重 | 全文 <15%，单源 <3% | 内部 8-gram 比对：对 ref 8 / ref 12 均为 **0.00%**；自比 48.8%（文本回收，非他人文本）。机构 iThenticate 未跑 | ⚠️ D5 |

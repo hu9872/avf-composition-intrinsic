@@ -23,7 +23,7 @@
       "affiliation": "Department of Nephrology, Chongqing University Three Gorges Hospital, 165 Xincheng Road, Wanzhou District, Chongqing 404000, China"
     }
   ],
-  "description": "<p>Pre-specified reanalysis of public human arteriovenous fistula single-cell RNA-sequencing data (GSE305423). The repository contains the analysis pipeline, fixed random seed (2611), pinned environment, all result tables cited in the article, and a numeric-provenance assertion script that re-derives every number quoted in the manuscript from the result files.</p><p>Main findings: apparent transcriptional signatures of maturation failure are dominated by changes in cell composition (including ambient-RNA-driven artefacts) rather than cell-intrinsic reprogramming; myofibroblast abundance, fate bias and matrisome programmes are unchanged within the detectable effect range.</p>",
+  "description": "<p>Pre-specified reanalysis of public human arteriovenous fistula single-cell and bulk RNA-sequencing data (GSE305423, GSE220796, GSE119296). The repository contains the analysis pipeline, fixed random seed (2611), pinned environment, all result tables cited in the article, and a numeric-provenance assertion script that re-derives every number quoted in the manuscript from the result files.</p><p>Main findings: apparent transcriptional signatures of maturation failure are dominated by changes in cell composition (including ambient-RNA-driven artefacts) rather than cell-intrinsic reprogramming; myofibroblast abundance, fate bias and matrisome programmes are unchanged within the detectable effect range.</p>",
   "references": [
     "10.1016/j.kint.2025.08.024",
     "10.1016/j.ekir.2023.01.008"
@@ -41,6 +41,11 @@
     },
     {
       "identifier": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE220796",
+      "relation": "isDerivedFrom",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE119296",
       "relation": "isDerivedFrom",
       "scheme": "url"
     }
