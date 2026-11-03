@@ -268,7 +268,7 @@ This is a secondary analysis of publicly deposited, de-identified human data; no
 
 #### Data sources
 
-Three public datasets were downloaded from GEO on 31 October 2026. GSE305423 (10x Genomics 3′ scRNA-seq) holds 21 libraries from 20 patients [[12]]; the two early libraries from one patient were merged into one donor and kept out of outcome comparisons. GSE220796 provides paired bulk RNA-seq of basilic vein and juxta-anastomotic AVF [[8]]; 20 of its 41 samples formed complete pairs (9 matured, 11 failed). GSE119296 (19 vein and 19 AVF bulk libraries, one shared identifier) has no usable pairing and served only as a positive control. No public human AVF spatial dataset exists, and no spatial claim is made.
+Three public datasets were retrieved from GEO and analysed locally. GSE305423 (10x Genomics 3′ scRNA-seq) holds 21 libraries from 20 patients [[12]]; the two early libraries from one patient were merged into one donor and kept out of outcome comparisons. GSE220796 provides paired bulk RNA-seq of basilic vein and juxta-anastomotic AVF [[8]]; 20 of its 41 samples formed complete pairs (9 matured, 11 failed). GSE119296 (19 vein and 19 AVF bulk libraries, one shared identifier) has no usable pairing and served only as a positive control. No public human AVF spatial dataset exists, and no spatial claim is made.
 
 #### Preprocessing and annotation
 
@@ -324,7 +324,7 @@ Software: Python 3.13.14, scanpy 1.12.5, anndata 0.13.4, numpy 2.5.4, pandas 3.1
 
 ### Additional resources
 
-The analysis plan, including the three pre-specified hypotheses and the decision rule for the appended cDC2 hypothesis, was written before the corresponding analyses were run and is provided in Document S1 as a dated record (31 October 2026). The study was not prospectively registered in a public registry; no registration number exists. The code repository doubles as the record of analysis order.
+The analysis plan, including the three pre-specified hypotheses and the decision rule for the appended cDC2 hypothesis, was written before the corresponding analyses were run. The study was not prospectively registered in a public registry; no registration number exists. The code repository doubles as the record of analysis order.
 
 ### Key resources table
 
