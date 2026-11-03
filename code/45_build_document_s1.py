@@ -80,6 +80,23 @@ def insert_csv_table(doc, name):
     doc.add_paragraph()
 
 
+def add_page_numbers(section):
+    """Centred page number in the footer, so reviewers can cite supplement pages."""
+    par = section.footer.paragraphs[0]
+    par.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    run = par.add_run()
+    run.font.size = Pt(9)
+    begin = OxmlElement("w:fldChar")
+    begin.set(qn("w:fldCharType"), "begin")
+    instr = OxmlElement("w:instrText")
+    instr.set(qn("xml:space"), "preserve")
+    instr.text = "PAGE"
+    end = OxmlElement("w:fldChar")
+    end.set(qn("w:fldCharType"), "end")
+    for el in (begin, instr, end):
+        run._r.append(el)
+
+
 def build():
     md = open(SRC, encoding="utf-8").read()
     lines = md.split("\n")
@@ -88,6 +105,7 @@ def build():
     sec.page_width, sec.page_height = Cm(21.0), Cm(29.7)
     sec.left_margin = sec.right_margin = Cm(2.0)
     sec.top_margin = sec.bottom_margin = Cm(2.0)
+    add_page_numbers(sec)
 
     st = doc.styles["Normal"]
     st.font.name = "Times New Roman"

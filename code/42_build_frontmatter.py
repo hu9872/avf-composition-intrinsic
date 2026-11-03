@@ -10,6 +10,7 @@ from docx import Document
 from docx.shared import Pt, Cm
 from docx.enum.text import WD_ALIGN_PARAGRAPH, WD_LINE_SPACING
 from docx.oxml.ns import qn
+import re
 
 ROOT = r"D:/AVF_GSE_2611"
 OUT = f"{ROOT}/manuscript"
@@ -24,10 +25,30 @@ HIGHLIGHTS = [
     "Composition accounts for much of the apparent transcriptional difference",
 ]
 
-ETOC = ("First Author et al. reanalyse public single-cell data from human arteriovenous "
-        "fistulas and show that transcriptional signatures of maturation failure largely "
-        "reflect tissue composition rather than cell-intrinsic reprogramming, so gene-level "
+ETOC = ("Tang et al. reanalyse public single-cell data from human arteriovenous fistulas "
+        "and show that transcriptional signatures of maturation failure largely reflect "
+        "tissue composition rather than cell-intrinsic reprogramming, so gene-level "
         "biomarkers should be interpreted against the cellular make-up of the sample.")
+
+
+def manuscript_metrics():
+    """Word counts taken from the Markdown source, so the title page cannot drift.
+
+    Returns (summary_words, main_text_words) or None if the source is missing.
+    """
+    try:
+        text = open(f"{ROOT}/manuscript/Manuscript_iScience_v1.md", encoding="utf-8").read()
+    except OSError:
+        return None
+    text = re.sub(r"\[\[\d+\]\]", "", text)
+
+    def block(start, end):
+        a = text.find(start)
+        b = text.find(end, a + len(start)) if a >= 0 else -1
+        return text[a + len(start):b] if b > a else ""
+
+    return (len(block("**Summary**", "**Keywords**").split()),
+            len(block("## Introduction", "## Resource availability").split()))
 
 
 def new_doc(spacing=1.5, size=12):
@@ -76,10 +97,17 @@ def title_page():
     p(doc, "arteriovenous fistula; vascular access; maturation failure; "
            "single-cell RNA sequencing; cell composition; ambient RNA")
     p(doc, "Manuscript metrics", 12, bold=True)
-    p(doc, "Summary, 150 words (limit 150). Main text, 4,600 words (Introduction to "
-           "Discussion, including Limitations of study). Display items, 8 main figures "
-           "and 3 main tables; STAR Methods is presented in full in the main document. "
-           "Supplemental information, Figures S1–S3, Tables S1–S12, Data S1.")
+    m = manuscript_metrics()
+    if m:
+        p(doc, f"Summary, {m[0]} words. Main text (Introduction to Discussion, including "
+               f"Limitations of study), approximately {int(round(m[1], -1)):,} words. "
+               "Display items, 8 main figures and 3 main tables; STAR Methods is presented "
+               "in full in the main document. Supplemental information, Figures S1–S3, "
+               "Tables S1–S12, Data S1.")
+    else:
+        p(doc, "Display items, 8 main figures and 3 main tables; STAR Methods is presented "
+               "in full in the main document. Supplemental information, Figures S1–S3, "
+               "Tables S1–S12, Data S1.")
     p(doc, "Reporting", 12, bold=True)
     p(doc, "This is a secondary analysis of publicly deposited, de-identified human data. "
            "No new human participants or animals were involved and no ethical approval was "
@@ -102,10 +130,6 @@ def highlights():
         r.font.size = Pt(12)
         r.font.name = "Times New Roman"
         par.paragraph_format.space_after = Pt(6)
-    p(doc, "")
-    p(doc, f"Four bullet points, each {min(len(h) for h in HIGHLIGHTS)}–"
-           f"{max(len(h) for h in HIGHLIGHTS)} characters including spaces (limit 85).", 9,
-      italic=True)
     doc.save(f"{OUT}/Highlights_iScience.docx")
     print("saved highlights")
 
@@ -116,10 +140,6 @@ def etoc():
     p(doc, TITLE, 11, italic=True)
     p(doc, "")
     p(doc, ETOC, 12)
-    p(doc, "")
-    p(doc, f"{len(ETOC.split())} words (limit 50). Third person, refers to "
-           "\"First Author et al.\" and replaces this placeholder with the surname of the "
-           "first author at submission.", 9, italic=True)
     doc.save(f"{OUT}/eTOC_blurb.docx")
     print("saved eTOC")
 

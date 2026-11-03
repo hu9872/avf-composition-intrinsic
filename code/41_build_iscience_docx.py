@@ -26,6 +26,23 @@ def add_line_numbers(section):
     sectPr.append(ln)
 
 
+def add_page_numbers(section):
+    """Centred page number in the footer; Cell Press asks for numbered pages."""
+    par = section.footer.paragraphs[0]
+    par.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    run = par.add_run()
+    run.font.size = Pt(10)
+    begin = OxmlElement("w:fldChar")
+    begin.set(qn("w:fldCharType"), "begin")
+    instr = OxmlElement("w:instrText")
+    instr.set(qn("xml:space"), "preserve")
+    instr.text = "PAGE"
+    end = OxmlElement("w:fldChar")
+    end.set(qn("w:fldCharType"), "end")
+    for el in (begin, instr, end):
+        run._r.append(el)
+
+
 def clean_inline(text):
     text = text.replace("\\*", "*")
     return text
@@ -105,6 +122,7 @@ def build():
     sec.left_margin = sec.right_margin = Cm(2.5)
     sec.top_margin = sec.bottom_margin = Cm(2.5)
     add_line_numbers(sec)
+    add_page_numbers(sec)
 
     st = doc.styles["Normal"]
     st.font.name = "Times New Roman"
