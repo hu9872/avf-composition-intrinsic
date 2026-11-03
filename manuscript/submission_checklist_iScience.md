@@ -65,10 +65,10 @@
 | E1 | 主图 | 单独文件、单页、≥300 dpi | 8 张，PNG 300 dpi + 矢量 PDF，合计 4.6 MB | ✅ |
 | E2 | 图注 | 检验/n/误差/符号定义 | 8 条图注齐备 | ✅ |
 | E3 | 主表 | 可编辑、无合并底纹 | 3 张（Table grid） | ✅ |
-| E4 | 补充材料 | 单一 Document S1 + Data S1 | `Document_S1.docx`（Methods S1–S13、Figures S1–S3、Tables S1–S12）+ `Data_S1.xlsx`（**13 个工作表**：S1–S5、S7–S14） | ✅ |
+| E4 | 补充材料 | 单一 Document S1 + Data S1 | `Document_S1.docx`（Methods S1–S13、Figures S1–S3、Tables S1–S12）+ `Data_S1.xlsx`（**13 个工作表，S1–S13 连续编号**） | ✅ |
 | E5 | 补充项正文引用 | 每项至少引一次 | S1–S12、FigS1–S3、Document/Data S1 均已引用 | ✅ |
 
-> E4 说明：工作表编号跳过 S6。成因是生成脚本先写了一版重复表再删除；**内容无缺项**，仅为编号不连续。为避免归档快照与投稿文件不一致，本次不改，如需连号可改 `44_make_supp_tables.py` 重排（会改动已归档的 Data S1）。
+> E4 说明：工作表编号原为 S1–S5、S7–S14（跳 S6，因生成脚本曾写一张重复表再删除）。已修正：`44_make_supp_tables.py` 删去该重复写入，`S6_decomposition`–`S13_signature_scores` 整体前移一位，现为 S1–S13 连续编号，**内容逐表比对与修改前完全一致**（13 张表、形状与数值全同）。
 
 ## F. 科学诚信
 

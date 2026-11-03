@@ -44,14 +44,14 @@ Thirteen sheets of source data, named after the analysis step that produced them
 | `S3_mural_fractions` | 12 | Mural/fibroblast state fractions per donor |
 | `S4_composition_tests` | 6 | Donor-level composition tests |
 | `S5_fibroblast_DE` | 12 | Differentially expressed genes in the fibroblast lineage |
-| `S7_decomposition` | 7 | Composition–intrinsic decomposition of the seven myeloid genes |
-| `S8_gene_origin` | 30 | Compartment-resolved genes with cell-of-origin screening outcome |
-| `S9_ligand_receptor_axes` | 9 | Pre-specified ligand–receptor axes |
-| `S10_ecm_donor` | 12 | Matrisome programme scores per donor |
-| `S11_bulk_DE` | 45,799 | Whole-tissue bulk differential expression (GSE220796) |
-| `S12_power_TOST` | 14 | Detectable effects and equivalence tests |
-| `S13_rule_sensitivity` | 30 | Cell-of-origin rule and expression floor sensitivity |
-| `S14_signature_scores` | 8 | Compartment signature scores in GSE220796 |
+| `S6_decomposition` | 7 | Composition–intrinsic decomposition of the seven myeloid genes |
+| `S7_gene_origin` | 30 | Compartment-resolved genes with cell-of-origin screening outcome |
+| `S8_ligand_receptor_axes` | 9 | Pre-specified ligand–receptor axes |
+| `S9_ecm_donor` | 12 | Matrisome programme scores per donor |
+| `S10_bulk_DE` | 45,799 | Whole-tissue bulk differential expression (GSE220796) |
+| `S11_power_TOST` | 14 | Detectable effects and equivalence tests |
+| `S12_rule_sensitivity` | 30 | Cell-of-origin rule and expression floor sensitivity |
+| `S13_signature_scores` | 8 | Compartment signature scores in GSE220796 |
 
 **Unfiltered tables.** `csv/S3_pseudobulk_DE.csv` and `csv/S5_compartment_DE.csv` contain every tested
 gene, not only significant ones.

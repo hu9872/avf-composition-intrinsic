@@ -123,21 +123,19 @@ def main():
         pd.read_csv(f"{RES}/s5_composition_tests.csv").round(6).to_excel(
             xl, sheet_name="S4_composition_tests", index=False)
         lin.to_excel(xl, sheet_name="S5_fibroblast_DE", index=False)
-        lin.to_excel(xl, sheet_name="S6_fibroblast_DE_dup", index=False)
-        xl.book.remove(xl.book["S6_fibroblast_DE_dup"])
         pd.read_csv(f"{RES}/s5f_decomposition_retained.csv").round(6).to_excel(
-            xl, sheet_name="S7_decomposition", index=False)
+            xl, sheet_name="S6_decomposition", index=False)
         pd.read_csv(f"{RES}/s5g_compartment_gene_screen.csv").round(6).to_excel(
-            xl, sheet_name="S8_gene_origin", index=False)
+            xl, sheet_name="S7_gene_origin", index=False)
         pd.read_csv(f"{RES}/s8c_pathway_tests.csv").round(6).to_excel(
-            xl, sheet_name="S9_ligand_receptor_axes", index=False)
+            xl, sheet_name="S8_ligand_receptor_axes", index=False)
         pd.read_csv(f"{RES}/s9_donor_ecm.csv").round(6).to_excel(
-            xl, sheet_name="S10_ecm_donor", index=False)
+            xl, sheet_name="S9_ecm_donor", index=False)
         pd.read_csv(f"{RES}/s10_deseq_AVF_failed_vs_matured.csv").round(6).to_excel(
-            xl, sheet_name="S11_bulk_DE", index=False)
-        t.to_excel(xl, sheet_name="S12_power_TOST", index=False)
-        s9.to_excel(xl, sheet_name="S13_rule_sensitivity", index=False)
-        s11.to_excel(xl, sheet_name="S14_signature_scores", index=False)
+            xl, sheet_name="S10_bulk_DE", index=False)
+        t.to_excel(xl, sheet_name="S11_power_TOST", index=False)
+        s9.to_excel(xl, sheet_name="S12_rule_sensitivity", index=False)
+        s11.to_excel(xl, sheet_name="S13_signature_scores", index=False)
     print("Data_S1.xlsx written")
 
 
