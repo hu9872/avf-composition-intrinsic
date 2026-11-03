@@ -9,7 +9,17 @@ versions of every supplementary table.
 |---|---|---|
 | `Document_S1.docx` | Supplemental methods S1–S13, figure legends S1–S3, tables S1–S12 | `code/45_build_document_s1.py` (source `Document_S1.md`) |
 | `Data_S1.xlsx` | Source data behind the figure panels, 13 sheets | `code/44_make_supp_tables.py` |
-| `csv/S*.csv`, `csv/T_S*.csv` | The same tables as individual files, including unfiltered versions where the workbook holds only significant rows | `code/20_supp_tables.py`, `code/44_make_supp_tables.py` |
+| `csv/T_S*.csv` | Tables S1–S12 of Document S1, one file per table | `code/44_make_supp_tables.py` |
+| `csv/S*.csv` | Intermediate exports from individual pipeline steps, including unfiltered versions where the workbook holds only significant rows. The number is the step order, not a worksheet number — see the note below | `code/20_supp_tables.py` |
+
+**Three numbering series, deliberately distinct.** This archive carries three independent S-number
+series. (i) *Supplemental methods S1–S13* — the method sections of Document S1. (ii) *Data S1
+worksheets S1–S13* — the source-data workbook, named after the analysis step that produced each sheet.
+(iii) *`csv/S*.csv`* — intermediate exports, numbered by pipeline step order (S4b, S6b and S7b are
+sub-steps). They are not aligned with one another: for example `csv/S6_myeloid_markers.csv` is a
+marker table from step 6, while Data S1 sheet `S6_decomposition` holds the composition–intrinsic
+decomposition, and Document S1 § S6 is the cell-of-origin screen. Read the file names, not the
+numbers, when crossing between the three.
 
 The three supplementary figures are not duplicated here. They live in `../figures/`
 (`FigS1_compartment_genes`, `FigS2_power`, `FigS3_compartment_signatures`; PDF and 300 dpi PNG) and are
