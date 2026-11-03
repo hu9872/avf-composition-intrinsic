@@ -30,10 +30,10 @@
 |---|---|---|---|---|
 | B1 | 章节顺序 | Title → Authors → Summary → Introduction → Results → Limitations → Discussion → Resource availability → Acknowledgments → Author contributions → Declaration of interests → AI 声明 → Supplemental info → Figure legends → Tables → STAR Methods → RRID → References | 完全一致 | ✅ |
 | B2 | Limitations of study | 独立章节 | 独立成节 | ✅ |
-| B3 | 正文篇幅 | 无硬性上限 | **约 4,490 词**（Introduction→Discussion，含 Limitations） | ✅ |
+| B3 | 正文篇幅 | 无硬性上限 | **约 4,715 词**（Introduction→Resource availability，含 Limitations；脚本实测口径，与 v1.1 的 4,490 不同口径，不可直接相减） | ✅ |
 | B4 | 过强表述 | 无 overclaim | 阴性结果统一写"排除大效应"；FN-integrin 标为假设生成 | ✅ |
 | B5 | 行号 / 页码 | 连续行号、页码可引 | 连续行号 + 页脚居中页码 | ✅ |
-| B6 | 参考文献 | 上标、连续、含 DOI | 37 条，上标连续，DOI 齐备 | ✅ |
+| B6 | 参考文献 | 上标、连续、含 DOI | **38 条**，编号 1–38 连续，上标连续，DOI 齐备；新增 34 = Shah et al. 2026（Kidney360） | ✅ |
 
 ## C. STAR Methods 与资源
 
@@ -84,10 +84,10 @@
 | # | 项目 | 现状 | 状态 |
 |---|---|---|---|
 | G1 | 投稿入口 | https://www.editorialmanager.com/iscience/ | ✅ 已确认 |
-| G2 | 建议 / 回避审稿人 | 3–4 位建议 + ≤2 位回避 | ⚠️ 待定名单 |
-| G3 | 备选联系人（Alternate contact） | 需姓名 + 邮箱 | ⚠️ 缺 Tang 的邮箱 |
-| G4 | APC | USD 3,240（不含税），接受后缴 | ⚠️ 待确认预算/机构协议 |
-| G5 | 官方 Declaration of Interests 表 | 需下载签字 | ⚠️ 未做 |
+| G2 | 建议 / 回避审稿人 | 3–4 位建议 + ≤2 位回避 | 名单已备：4 位建议（Roy-Chaudhury / Hinz / Kramann / Phipson，邮箱均经机构官网核对）+ 0 位回避；英文理由可直接粘贴。见 `plan/19_投稿系统三件事_2026-11-03.md` §3 | ⚠️ 待录入 EM |
+| G3 | 备选联系人（Alternate contact） | 需姓名 + 邮箱 | Yuewu Tang / `tangy111@126.com`（填 EM 作者信息或 Alternate contact；正文不改） | ✅ |
+| G4 | APC | USD 3,240（不含税），接受后缴 | ⚠️ 待确认预算/机构协议 | ⚠️ |
+| G5 | 官方 Declaration of Interests 表 | 需下载签字 | 官方 PDF：`cell.com/pb/assets/raw/shared/forms/di_form.pdf`；逐项填法与签署规则见 `plan/19…md` §1 | ⚠️ 待下载签字上传 |
 
 ---
 

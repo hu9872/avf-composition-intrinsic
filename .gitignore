@@ -31,6 +31,10 @@ manuscript/*.docx
 supplement/*.docx
 plan/**/*.docx
 
+# ---- Submission paperwork: publisher forms and filled declarations (not part of the public archive) ----
+manuscript/Declaration_of_Interests_*.pdf
+manuscript/DECLARATION OF INTERESTS POLICY.pdf
+
 # ---- Packaged release archive built for deposit ----
 dist/
 
