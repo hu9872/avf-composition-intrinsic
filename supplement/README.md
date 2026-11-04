@@ -2,7 +2,7 @@
 
 **Article:** Apparent transcriptional signatures of arteriovenous fistula maturation failure are dominated by cell composition
 
-This folder holds the two supplementary files that accompany the manuscript, plus the individual CSV
+This folder holds the supplementary files that accompany the manuscript, plus the individual CSV
 versions of every supplementary table.
 
 | File | Content | Built by |
@@ -11,6 +11,12 @@ versions of every supplementary table.
 | `Data_S1.xlsx` | Source data behind the figure panels, 13 sheets | `code/44_make_supp_tables.py` |
 | `csv/T_S*.csv` | Tables S1–S12 of Document S1, one file per table | `code/44_make_supp_tables.py` |
 | `csv/S*.csv` | Intermediate exports from individual pipeline steps, including unfiltered versions where the workbook holds only significant rows. The number is the step order, not a worksheet number — see the note below | `code/20_supp_tables.py` |
+
+**Two entries in that table are build products, not archived binaries.** `Document_S1.docx` does not
+exist in this archive as a file: it is generated from `Document_S1.md` by
+`code/45_build_document_s1.py`. Likewise two CSV exports (`csv/S3_pseudobulk_DE.csv`,
+`csv/S5_compartment_DE.csv`) exceed the archive size limit and are written by `code/20_supp_tables.py`.
+Run `make tables` to recreate all three; the files the journal itself needs are submitted separately.
 
 **Three numbering series, deliberately distinct.** This archive carries three independent S-number
 series. (i) *Supplemental methods S1–S13* — the method sections of Document S1. (ii) *Data S1
