@@ -6,6 +6,8 @@
 
 本版所有数字均由脚本从成品文件重新测量，不再沿用旧记录（v1.0 中"Summary 150 词""Data S1 14 sheet"等均为估值，已更正）。
 
+> **本文件性质**：投稿准备期的内部工作文档，不是分析代码或数据记录。已由 `.gitattributes` 标为 `export-ignore`，**不进入 `git archive` 生成的发布包**。文件中不含拟邀审稿人姓名与任何个人邮箱——这两类信息只保留在本地未入库的工作笔记中。
+
 ---
 
 ## A. 前置材料
@@ -56,7 +58,7 @@
 | D3 | 生成式 AI 声明 | 官方章节名 + 工具具名 | 官方标题；按 Elsevier 2026-06 政策写明工具名 WorkBuddy、用途（代码起草与重构、语言润色）与作者把关；Document S1 的 S13 另有一段 Methods 说明（AI 参与研究过程的要求） | ✅ |
 | D4 | 二次分析声明 | 封面信 + 正文 | 已明确 secondary analysis、非重复发表 | ✅ |
 | D5 | 查重 | 全文 <15%，单源 <3% | 内部 8-gram 比对：对 ref 8 / ref 12 均为 **0.00%**；自比 48.8%（文本回收，非他人文本）。机构 iThenticate 未跑 | ⚠️ D5 |
-| D6 | 干净环境复现 | 从 raw 到图零报错 | 未整跑（约 6–8 h）；单步与断言脚本均已通过 | ❌ D6 |
+| D6 | 干净环境复现 | 从 raw 到图零报错 | **部分实测**（2026-11-04，独立 clone + 全新 venv + 迁移路径）：`01_prepare` 从 raw 重建成功，97,070 × 36,601，175 s，与归档矩阵一致；`02_qc` 起 OOM——本机**无页面文件**，提交上限 = 物理内存 15.7 GB，整链需 ≥32 GB。单步与断言脚本（48/48）均已通过 | ⚠️ D6 |
 
 ## E. 图表与补充材料
 
@@ -84,10 +86,10 @@
 | # | 项目 | 现状 | 状态 |
 |---|---|---|---|
 | G1 | 投稿入口 | https://www.editorialmanager.com/iscience/ | ✅ 已确认 |
-| G2 | 建议 / 回避审稿人 | 3–4 位建议 + ≤2 位回避 | 名单已备：4 位建议（Roy-Chaudhury / Hinz / Kramann / Phipson，邮箱均经机构官网核对）+ 0 位回避；英文理由可直接粘贴。见 `plan/19_投稿系统三件事_2026-11-03.md` §3 | ⚠️ 待录入 EM |
-| G3 | 备选联系人（Alternate contact） | 需姓名 + 邮箱 | Yuewu Tang / `tangy111@126.com`（填 EM 作者信息或 Alternate contact；正文不改） | ✅ |
+| G2 | 建议 / 回避审稿人 | 3–4 位建议 + ≤2 位回避 | 名单已定：4 位建议 + 0 位回避，邮箱均经机构官网核对，英文理由已备好。**姓名与邮箱只存本地工作笔记，不入库、不随包发布**（避免公开拟邀审稿人身份） | ⚠️ 待录入 EM |
+| G3 | 备选联系人（Alternate contact） | 需姓名 + 邮箱 | 第二作者姓名与邮箱已备，填于 EM 作者信息或 Alternate contact 栏；**不写入正文、不入库**（个人联系信息不随公开档案发布） | ✅ |
 | G4 | APC | USD 3,240（不含税），接受后缴 | ⚠️ 待确认预算/机构协议 | ⚠️ |
-| G5 | 官方 Declaration of Interests 表 | 需下载签字 | 官方 PDF：`cell.com/pb/assets/raw/shared/forms/di_form.pdf`；逐项填法与签署规则见 `plan/19…md` §1 | ⚠️ 待下载签字上传 |
+| G5 | 官方 Declaration of Interests 表 | 需下载签字 | 已取得官方 PDF（3 页、10 勾选 + 1 文字框、无签名栏），按本文实际情况填好并另存 `Declaration_of_Interests_Tang_Hu.pdf`；上传时文件类型选 `Declaration of Interest` | ✅ |
 
 ---
 

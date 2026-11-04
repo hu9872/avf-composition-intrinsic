@@ -1,5 +1,7 @@
 # ---- Raw and intermediate data (about 23 GB; see data/README.md for download) ----
-data/
+# `data/` alone would exclude the directory itself, and git cannot re-include a file
+# inside an excluded directory — so exclude the contents, then whitelist the README.
+data/*
 !data/README.md
 
 # ---- Large intermediate result tables (>2 MB, rebuilt by the pipeline; see docs/RESULTS_INDEX.md) ----

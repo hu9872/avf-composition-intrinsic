@@ -6,6 +6,8 @@ Target: from a clean machine to every number in the manuscript, with no manual e
 
 - Linux / macOS / Windows (WSL recommended on Windows)
 - 16 cores, **64 GB RAM**, 60 GB free disk (23 GB data + intermediates)
+- On Windows, make sure a **page file** is enabled. With it disabled the commit limit equals
+  physical RAM and the first large temporary array in `02_qc.py` aborts the run; see § 8.
 - conda or mamba, **or** Python 3.13 with `pip` (see § 1)
 - Network access to `ftp.ncbi.nlm.nih.gov`
 
@@ -27,7 +29,7 @@ pip install pydeseq2==0.5.4
 ```
 
 **No conda.** `requirements.txt` pins exactly the same versions, so a plain virtual
-environment is equivalent and was used to re-run the whole pipeline end to end:
+environment is equivalent and is supported:
 
 ```bash
 python3.13 -m venv .venv
@@ -110,10 +112,11 @@ Outputs land in `figures/` and `supplement/`. Figures 1–8 and S1 are drawn by 
 python code/90_verify_numbers.py
 ```
 
-Expected last line:
+Expected last lines:
 
 ```
-checked 48 numeric claims (144 table cells) against results/ — 0 failures
+checked 48 numeric claims (144 table cells) against results/
+PASS 48 / FAIL 0
 ```
 
 Any failure prints `FAIL <id> <claim>: text <a> vs source <b>` and exits non-zero. This script
@@ -132,6 +135,7 @@ python code/95_text_overlap_check.py
 |---|---|---|
 | `FileNotFoundError: data/raw/...` | `00_download.py` not run, or run before relocation | rerun step 2 then step 3 |
 | `KeyError` on `obs['celltype']` | `03_annotate.py` not run | run `make analysis` from the top |
+| `MemoryError` in `02_qc.py` on a 16 GB machine | Windows with the page file disabled: the commit limit equals physical RAM, so one 1.8 GB temporary array on the 236 M non-zeros cannot be allocated | enable a page file (≥32 GB) or use a machine with ≥32 GB RAM; `01_prepare.py` alone needs ~4 GB and runs in 175 s |
 | Memory kill during `05_trajectory.py` | diffusion maps on 66 k cells | ≥64 GB RAM, or subset to the fibroblast compartment as in `04_fibro.py` |
 | `leidenalg` import error | igraph/leidenalg mismatch | `pip install igraph==1.0.0 leidenalg==0.12.0` |
 | Figures differ slightly in layout | matplotlib version | pin to `3.11.2` |

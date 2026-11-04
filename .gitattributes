@@ -1,0 +1,5 @@
+# Keep repository-only working documents out of `git archive` output.
+# The Zenodo deposit is produced with `git archive`, so a path marked
+# export-ignore stays under version control but never enters the archive.
+
+manuscript/submission_checklist_iScience.md export-ignore

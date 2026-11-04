@@ -17,8 +17,9 @@ Everything needed to reproduce the numbers, figures and tables in the manuscript
 | `code/` | Analysis pipeline, figure builders, document builders, and the numeric-provenance assertion script |
 | `results/` | Every result table cited in the article (large intermediate marker tables excluded — see `docs/RESULTS_INDEX.md`) |
 | `figures/` | Main figures 1–8, supplementary figures S1–S3 and the graphical abstract (PDF + 300 dpi PNG) |
-| `manuscript/` | Manuscript source (Markdown) and the submission checklist the package is checked against before upload |
+| `manuscript/` | Manuscript source (Markdown). The submission checklist stored beside it is repository-only and is excluded from the archive (see `.gitattributes`) |
 | `docs/` | How to reproduce, where the data come from, which file backs which claim |
+| `supplement/` | `Data_S1.xlsx` (13 worksheets, S1–S13), `Document_S1.md` (Supplemental methods, figures and tables), and the per-step CSV exports in `csv/` — see `supplement/README.md` for how the three S-numbering series differ |
 | `data/` | **Not included** (23 GB). Download instructions in `data/README.md` |
 
 ## Quick start
