@@ -63,6 +63,13 @@ def new_doc(spacing=1.5, size=12):
     st.element.rPr.rFonts.set(qn("w:eastAsia"), "宋体")
     st.paragraph_format.line_spacing = spacing
     st.paragraph_format.space_after = Pt(6)
+    cp = doc.core_properties
+    cp.author = cp.last_modified_by = "Daijun Hu"
+    cp.title = TITLE
+    cp.subject = "iScience research article"
+    cp.keywords = ("arteriovenous fistula; vascular access; single-cell RNA sequencing; "
+                   "cell composition")
+    cp.comments = ""
     return doc
 
 
@@ -111,9 +118,11 @@ def title_page():
     p(doc, "Reporting", 12, bold=True)
     p(doc, "This is a secondary analysis of publicly deposited, de-identified human data. "
            "No new human participants or animals were involved and no ethical approval was "
-           "required. The study was not prospectively registered; the dated analysis plan "
-           "is provided in Document S1. No generative AI was used to produce results; the "
-           "declaration of AI-assisted technologies appears in the manuscript.")
+           "required. The study was not prospectively registered; the analysis plan, including "
+           "the three pre-specified hypotheses and the decision rule for the appended cDC2 "
+           "hypothesis, was written before the corresponding analyses were run. Generative AI "
+           "was not used to generate results; its role in drafting and refactoring analysis "
+           "code and in language editing is declared in the manuscript.")
     doc.save(f"{OUT}/Title_Page_iScience.docx")
     print("saved title page")
 
@@ -145,7 +154,7 @@ def etoc():
 
 
 COVER = [
-    ("[Date]", False),
+    ("4 November 2026", False),
     ("", False),
     ("The Editors", False),
     ("iScience", False),

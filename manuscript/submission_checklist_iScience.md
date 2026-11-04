@@ -24,7 +24,7 @@
 | A8 | 期刊元信息残留 | 无 | 全文无旧目标期刊字样 | ✅ |
 | A9 | 致谢与基金 | 无占位符 | 致谢三个公共数据集；标准"无特定基金"句 | ✅ |
 | A10 | CRediT | 与基金声明自洽 | 已删 `funding acquisition`（因无基金） | ✅ |
-| A11 | 封面信 | 背景 / 进展 / 意义 | 三段式齐备；`[Date]` 待投稿当日填写 | ⚠️ A11 |
+| A11 | 封面信 | 背景 / 进展 / 意义 | 三段式齐备；日期已填 `4 November 2026`（改日投递须改 `code/42_build_frontmatter.py` 的 `COVER` 首行并重建） | ✅ |
 
 ## B. 正文结构
 
@@ -32,7 +32,7 @@
 |---|---|---|---|---|
 | B1 | 章节顺序 | Title → Authors → Summary → Introduction → Results → Limitations → Discussion → Resource availability → Acknowledgments → Author contributions → Declaration of interests → AI 声明 → Supplemental info → Figure legends → Tables → STAR Methods → RRID → References | 完全一致 | ✅ |
 | B2 | Limitations of study | 独立章节 | 独立成节 | ✅ |
-| B3 | 正文篇幅 | 无硬性上限 | **约 4,715 词**（Introduction→Resource availability，含 Limitations；脚本实测口径，与 v1.1 的 4,490 不同口径，不可直接相减） | ✅ |
+| B3 | 正文篇幅 | 无硬性上限 | **约 4,540 词**（脚本口径：去掉 `[n]` 引用标记后按空白分词，Introduction→Resource availability，含 Limitations） | ✅ |
 | B4 | 过强表述 | 无 overclaim | 阴性结果统一写"排除大效应"；FN-integrin 标为假设生成 | ✅ |
 | B5 | 行号 / 页码 | 连续行号、页码可引 | 连续行号 + 页脚居中页码 | ✅ |
 | B6 | 参考文献 | 上标、连续、含 DOI | **38 条**，编号 1–38 连续，上标连续，DOI 齐备；新增 34 = Shah et al. 2026（Kidney360） | ✅ |
@@ -69,6 +69,7 @@
 | E3 | 主表 | 可编辑、无合并底纹 | 3 张（Table grid） | ✅ |
 | E4 | 补充材料 | 单一 Document S1 + Data S1 | `Document_S1.docx`（Methods S1–S13、Figures S1–S3、Tables S1–S12）+ `Data_S1.xlsx`（**13 个工作表，S1–S13 连续编号**） | ✅ |
 | E5 | 补充项正文引用 | 每项至少引一次 | S1–S12、FigS1–S3、Document/Data S1 均已引用 | ✅ |
+| E6 | 主图尺寸（制作规格） | 单栏 85 / 1.5 栏 114 / 全宽 174 mm；图内字 6–8 pt | 现为 **268–348 mm 宽、最小组件 6.0–6.8 pt**；按 174 mm 排版后最小标号约 **3.1 pt**，低于 6 pt 下限 → **不符合制作规格**。iScience 明写"初始投稿无需满足其他章节的格式要求"，故不阻断投稿；**须在返修/录用阶段按 174 mm 重排并重出图** | ⚠️ E6（录用后） |
 
 > E4 说明：工作表编号原为 S1–S5、S7–S14（跳 S6，因生成脚本曾写一张重复表再删除）。已修正：`44_make_supp_tables.py` 删去该重复写入，`S6_decomposition`–`S13_signature_scores` 整体前移一位，现为 S1–S13 连续编号，**内容逐表比对与修改前完全一致**（13 张表、形状与数值全同）。
 

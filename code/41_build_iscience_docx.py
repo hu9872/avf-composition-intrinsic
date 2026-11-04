@@ -199,6 +199,13 @@ def build():
     if in_tbl:
         flush_table(doc, tbl)
 
+    cp = doc.core_properties
+    cp.author = cp.last_modified_by = "Daijun Hu"
+    cp.title = ("Apparent transcriptional signatures of arteriovenous fistula maturation "
+                "failure are dominated by cell composition")
+    cp.subject = "iScience research article"
+    cp.comments = ""
+
     try:
         doc.save(OUT)
         print("saved", OUT)
