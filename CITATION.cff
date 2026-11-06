@@ -28,15 +28,8 @@ authors:
     # Add an ORCID iD here when one is available; leave the line out rather
     # than leaving an empty placeholder.
     # orcid: "https://orcid.org/0000-0000-0000-0000"
-preferred-citation:
-  type: article
-  title: "Apparent transcriptional signatures of arteriovenous fistula maturation failure are dominated by cell composition"
-  authors:
-    - family-names: "Tang"
-      given-names: "Yuewu"
-    - family-names: "Hu"
-      given-names: "Daijun"
-  journal: "iScience"
-  year: 2026
-  # volume/pages/doi are added after acceptance; until then the archived record
-  # is of type software and the preferred citation is the Zenodo release.
+# No `preferred-citation` block until the article is accepted. A preferred
+# citation must name the venue the article actually appeared in; leaving it out
+# means citation tools fall back to this software record — which is the correct
+# thing to cite today. Restore the block (with journal, volume, pages, doi) in
+# the release that follows acceptance, never before.
