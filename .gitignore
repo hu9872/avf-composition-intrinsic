@@ -53,3 +53,21 @@ venv/
 # ---- Large supplementary tables (>5 MB, rebuilt by make tables) ----
 supplement/csv/S3_pseudobulk_DE.csv
 supplement/csv/S5_compartment_DE.csv
+
+# ---- Submission staging and review artefacts (never part of the public archive) ----
+# The manuscript, cover letter, title page, journal forms and any scratch files
+# assembled while a submission is under review stay out of the repository: adding
+# them would disclose unpublished text before the decision letter.
+submission/
+_chk/
+manuscript/_*
+manuscript/Manuscript_Kidney360_v1.md
+manuscript/Reference_Verification_Kidney360.md
+code/43_build_cover_letter_kidney360.py
+code/44_build_title_page_kidney360.py
+code/91_verify_refs_doi.py
+code/92_verify_refs_detail.py
+results/ref_verification.csv
+# Journal-supplied guidance and typeset outputs downloaded or rebuilt locally
+/*.pdf
+supplement/*.pdf
