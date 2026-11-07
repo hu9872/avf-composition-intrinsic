@@ -1,4 +1,4 @@
-# Analysis code for: apparent transcriptional signatures of AVF maturation failure are dominated by cell composition
+# Analysis code for: Cell composition accounts for much of the transcriptomic difference between failed and matured human arteriovenous fistulas
 
 Pre-specified reanalysis of public human arteriovenous fistula (AVF) single-cell RNA-sequencing
 data. The study asks a simple question with a methodological answer: when a bulk or
@@ -93,8 +93,8 @@ redistributed.
 
 See `CITATION.cff`. Until the article is accepted, please cite the archived release:
 
-> Tang, Y., & Hu, D. (2026). Analysis code for: apparent transcriptional signatures of
-> arteriovenous fistula maturation failure are dominated by cell composition (v1.0.1).
+> Tang, Y., & Hu, D. (2026). Analysis code for: Cell composition accounts for much of the
+> transcriptomic difference between failed and matured human arteriovenous fistulas (v1.0.1).
 > Zenodo. https://doi.org/10.5281/zenodo.23887196
 
 The concept DOI https://doi.org/10.5281/zenodo.23887195 always resolves to the most recent

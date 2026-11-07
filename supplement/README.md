@@ -1,6 +1,6 @@
 # Supplementary material
 
-**Article:** Apparent transcriptional signatures of arteriovenous fistula maturation failure are dominated by cell composition
+**Article:** Cell composition accounts for much of the transcriptomic difference between failed and matured human arteriovenous fistulas
 
 This folder holds the supplementary files that accompany the manuscript, plus the individual CSV
 versions of every supplementary table.

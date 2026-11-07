@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this code or the derived tables, please cite this archive. The article citation will be added here once the article is published."
-title: "Analysis code for: Apparent transcriptional signatures of arteriovenous fistula maturation failure are dominated by cell composition"
+title: "Analysis code for: Cell composition accounts for much of the transcriptomic difference between failed and matured human arteriovenous fistulas"
 abstract: >-
   Pre-specified reanalysis of public human arteriovenous fistula single-cell RNA-sequencing
   data (GSE305423) that separates the effect of cell composition from cell-intrinsic
