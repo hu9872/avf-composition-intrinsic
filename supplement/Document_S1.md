@@ -1,6 +1,6 @@
-# Document S1
+# Supplemental Material
 
-**Supplemental information for:** Apparent transcriptional signatures of arteriovenous fistula maturation failure are dominated by cell composition
+**Supplemental material for:** Cell composition accounts for much of the transcriptomic difference between failed and matured human arteriovenous fistulas
 
 **Contents**
 
@@ -70,7 +70,7 @@ Two sensitivity analyses were applied to the gating. First, a cluster-independen
 
 Failed-group cDC2 cells had a median of 14,474 UMIs against 17,070 in matured fistulas, a 15% difference that lowers the detection probability of every transcript and would on its own produce an apparent loss of markers. Each cell was therefore downsampled to exactly 5,000 UMIs by multinomial resampling of its count vector, and detection rate and counts per 10,000 recomputed on the resampled matrix. Cells with fewer than 5,000 UMIs were excluded; 1,086 of 1,158 cDC2 cells qualified, from 20 donors. The donor-level comparison used the 12 post-operative donors (6 failed, 6 matured).
 
-Seven housekeeping genes served as positive controls. Standardised differences (failed minus matured, counts per 10,000) were RPS18 0.17, EEF1A1 0.12, GAPDH 0.31, TMSB10 −0.33, B2M −0.66, ACTB −0.97 and RPL13A 1.04. Four of the seven had p above 0.5; RPL13A (p = 0.11) and ACTB (p = 0.14) did not reach significance, so equalisation was partial but without a detectable residual difference in the controls. This is reported in the main text and constrains how the CD1C difference can be read.
+Seven housekeeping genes served as positive controls. Standardised differences (failed minus matured, counts per 10,000) were RPS18 0.17, EEF1A1 0.12, GAPDH 0.31, TMSB10 −0.33, B2M −0.66, ACTB −0.97 and RPL13A 1.04. Four of the seven had P above 0.5; RPL13A (P = 0.11) and ACTB (P = 0.14) did not reach significance, so equalisation was partial but without a detectable residual difference in the controls. This is reported in the main text and constrains how the CD1C difference can be read.
 
 A CD1C-low, C1QA-positive state was defined by re-embedding the dendritic-like cells (cDC2, pDC and the CD1C-negative monocyte fraction) on 800 highly variable genes, 25 principal components, Harmony on donor (15 iterations), 15 neighbours on 20 components and Leiden 0.8. Its frequency was expressed as a centred log-ratio per donor.
 
@@ -112,7 +112,7 @@ Power was computed for a two-sample t-test with equal group sizes by non-central
 
 ### S12. Compartment signature scores in an independent bulk cohort
 
-Deconvolution of the bulk cohort against a same-tissue single-cell reference was attempted first and was not identifiable: with 11,219 shared genes and unconstrained non-negative least squares, weights collapsed onto a single compartment and the median coefficient of determination was 0.31. Compartment abundance was therefore probed with signature scores. For each of the eight compartments, the 50 genes with the highest specificity in the study's own reference profile were selected, specificity being log2 CPM in the compartment minus the mean over the other compartments, restricted to genes above 10 CPM and to positive specificity. Each sample was scored as the mean gene-wise z-score across samples, and a housekeeping-normalised variant was computed using the mean of RPL13A, RPLP0, B2M, TBP, GAPDH, ACTB and PPIA. Scores were compared between outcomes by Welch's t-test. Sample-level global properties (mean log2 CPM, number of detected genes, library size) did not differ between groups (all p > 0.9), which excludes a library-quality explanation for the observed differences.
+Deconvolution of the bulk cohort against a same-tissue single-cell reference was attempted first and was not identifiable: with 11,219 shared genes and unconstrained non-negative least squares, weights collapsed onto a single compartment and the median coefficient of determination was 0.31. Compartment abundance was therefore probed with signature scores. For each of the eight compartments, the 50 genes with the highest specificity in the study's own reference profile were selected, specificity being log2 CPM in the compartment minus the mean over the other compartments, restricted to genes above 10 CPM and to positive specificity. Each sample was scored as the mean gene-wise z-score across samples, and a housekeeping-normalised variant was computed using the mean of RPL13A, RPLP0, B2M, TBP, GAPDH, ACTB and PPIA. Scores were compared between outcomes by Welch's t-test. Sample-level global properties (mean log2 CPM, number of detected genes, library size) did not differ between groups (all P > 0.9), which excludes a library-quality explanation for the observed differences.
 
 ### S13. Software and reproducibility
 

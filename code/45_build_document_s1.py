@@ -165,7 +165,7 @@ def build():
         insert_md_table(doc, tbl)
     cp = doc.core_properties
     cp.author = cp.last_modified_by = "Daijun Hu"
-    cp.title = "Document S1 - supplemental methods, figures and tables"
+    cp.title = "Supplemental Material - methods, figure legends and tables"
     cp.subject = "iScience research article - supplemental information"
     cp.comments = ""
     doc.save(OUT)

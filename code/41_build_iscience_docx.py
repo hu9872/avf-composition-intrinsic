@@ -4,6 +4,7 @@
       [[1,2]] -> 上标引用；**bold**、*italic*、`code`；
       正文 12 pt、双倍行距、连续行号；表格为无底纹可编辑 Word 表格。
 """
+import os
 import re
 import sys
 from docx import Document
@@ -13,8 +14,13 @@ from docx.enum.table import WD_TABLE_ALIGNMENT
 from docx.oxml.ns import qn
 from docx.oxml import OxmlElement
 
-SRC = r"D:/AVF_GSE_2611/manuscript/Manuscript_iScience_v1.md"
-OUT = r"D:/AVF_GSE_2611/manuscript/Manuscript_iScience_v1.docx"
+import os
+SRC = os.environ.get("MS_SRC") or r"D:/AVF_GSE_2611/manuscript/Manuscript_iScience_v1.md"
+OUT = os.environ.get("MS_OUT") or r"D:/AVF_GSE_2611/manuscript/Manuscript_iScience_v1.docx"
+DOC_TITLE = os.environ.get("MS_TITLE") or (
+    "Apparent transcriptional signatures of arteriovenous fistula maturation "
+    "failure are dominated by cell composition")
+DOC_SUBJECT = os.environ.get("MS_SUBJECT") or "iScience research article"
 
 
 def add_line_numbers(section):
@@ -121,7 +127,7 @@ def build():
     sec.page_width, sec.page_height = Cm(21.0), Cm(29.7)
     sec.left_margin = sec.right_margin = Cm(2.5)
     sec.top_margin = sec.bottom_margin = Cm(2.5)
-    add_line_numbers(sec)
+    add_line_numbers(sec) if os.environ.get("MS_LINE_NUMBERS", "1") == "1" else None
     add_page_numbers(sec)
 
     st = doc.styles["Normal"]
@@ -201,9 +207,8 @@ def build():
 
     cp = doc.core_properties
     cp.author = cp.last_modified_by = "Daijun Hu"
-    cp.title = ("Apparent transcriptional signatures of arteriovenous fistula maturation "
-                "failure are dominated by cell composition")
-    cp.subject = "iScience research article"
+    cp.title = DOC_TITLE
+    cp.subject = DOC_SUBJECT
     cp.comments = ""
 
     try:
@@ -211,7 +216,6 @@ def build():
         print("saved", OUT)
     except PermissionError:
         # Word / 预览器占用文件时另存，避免流水线中断
-        import os
         alt = os.path.splitext(OUT)[0] + ".new.docx"
         doc.save(alt)
         print(f"[警告] {OUT} 被占用（可能正在预览器中打开），已另存为 {alt}")

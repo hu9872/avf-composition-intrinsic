@@ -9,6 +9,7 @@
 
 用法：python code/90_verify_numbers.py
 """
+import glob
 import os
 import re
 import sys
@@ -17,7 +18,22 @@ import pandas as pd
 
 ROOT = r"D:/AVF_GSE_2611"
 RES = f"{ROOT}/results"
-MS = f"{ROOT}/manuscript/Manuscript_iScience_v1.md"
+
+
+def _default_manuscript():
+    """Pick the most recently edited draft, so the gate never silently runs on a
+    superseded file. Set MS_PATH to pin a specific manuscript instead."""
+    cands = [p for p in glob.glob(os.path.join(ROOT, "manuscript", "Manuscript_*.md"))
+             if "_backup" not in os.path.basename(p)]
+    if not cands:
+        raise SystemExit("no manuscript under manuscript/; set MS_PATH")
+    cands.sort(key=os.path.getmtime)
+    return cands[-1]
+
+
+# 默认校验 manuscript/ 下最近修改的稿子；指定稿件用 MS_PATH：
+# MS_PATH=manuscript/Manuscript_iScience_v1.md python code/90_verify_numbers.py
+MS = os.environ.get("MS_PATH") or _default_manuscript()
 
 
 def load(name):
@@ -39,16 +55,16 @@ def build_checks():
     comp = load("s5_composition_tests")
     r = row(comp, state="Myofibroblast")
     c.append(("C01", "myofibroblast abundance", "s5_composition_tests",
-              f"(ΔCLR +{r['diff']:.2f}, d = {r['cohens_d']:.2f}, p = {r['welch_p']:.2f})",
+              f"(ΔCLR +{r['diff']:.2f}, d = {r['cohens_d']:.2f}, P = {r['welch_p']:.2f})",
               "05b_composition_pseudobulk.py", "Fig3B"))
     r = row(comp, state="AF_resident")
     c.append(("C02", "resident AF abundance", "s5_composition_tests",
-              f"(+{r['diff']:.2f}, d = {r['cohens_d']:.2f}, p = {r['welch_p']:.2f})",
+              f"(+{r['diff']:.2f}, d = {r['cohens_d']:.2f}, P = {r['welch_p']:.2f})",
               "05b_composition_pseudobulk.py", "Fig3B"))
     r = row(comp, state="Pericyte")
     c.append(("C03", "pericyte abundance", "s5_composition_tests",
               f"(−{abs(r['diff']):.2f}, d = −{abs(r['cohens_d']):.2f}, "
-              f"Welch p = {r['welch_p']:.3f}, Mann–Whitney p = {r['mwu_p']:.3f})",
+              f"Welch P = {r['welch_p']:.3f}, Mann–Whitney P = {r['mwu_p']:.3f})",
               "05b_composition_pseudobulk.py", "Fig3B"))
     c.append(("C04", "pericyte FDR", "s5_composition_tests",
               f"without surviving correction (FDR = {r['fdr']:.2f})",
@@ -56,7 +72,7 @@ def build_checks():
 
     r = row(comp, state="SMC_synthetic")
     c.append(("C05", "synthetic SMC abundance", "s5_composition_tests",
-              f"(+{r['diff']:.2f} CLR, d = {r['cohens_d']:.2f}, p = {r['welch_p']:.2f})",
+              f"(+{r['diff']:.2f} CLR, d = {r['cohens_d']:.2f}, P = {r['welch_p']:.2f})",
               "05b_composition_pseudobulk.py", "Fig3B"))
 
     det = load("s30_detectable_effect")
@@ -89,28 +105,28 @@ def build_checks():
     r = row(fate, fate="Myofibroblast")
     c.append(("C11", "myofibroblast fate", "s7_fate_tests",
               f"was {r['failed']:.3f} in failed and {r['mature']:.3f} in matured fistulas "
-              f"(d = −{abs(r['cohens_d']):.2f}, p = {r['welch_p']:.2f}, FDR = {r['fdr']:.2f})",
+              f"(d = −{abs(r['cohens_d']):.2f}, P = {r['welch_p']:.2f}, FDR = {r['fdr']:.2f})",
               "05_trajectory.py", "Fig4C"))
     r2 = row(fate, fate="SMC_contractile")
     c.append(("C12", "contractile fate", "s7_fate_tests",
               f"into contractile SMC {r2['failed']:.3f} versus {r2['mature']:.3f} "
-              f"(d = {r2['cohens_d']:.2f}, p = {r2['welch_p']:.2f})",
+              f"(d = {r2['cohens_d']:.2f}, P = {r2['welch_p']:.2f})",
               "05_trajectory.py", "Fig4C"))
     r3 = row(fate, fate="AF_resident")
     c.append(("C13", "resident fate", "s7_fate_tests",
               f"into resident adventitial-like fibroblasts {r3['failed']:.3f} versus "
-              f"{r3['mature']:.3f} (d = {r3['cohens_d']:.2f}, p = {r3['welch_p']:.2f})",
+              f"{r3['mature']:.3f} (d = {r3['cohens_d']:.2f}, P = {r3['welch_p']:.2f})",
               "05_trajectory.py", "Fig4C"))
 
     ecm = load("s9_ecm_tests")
     lo = ecm.loc[ecm.metric.isin([f"ECM{i}" for i in range(1, 6)]), "p"]
     c.append(("C14", "ECM programmes p range", "s9_ecm_tests",
-              f"None differed between groups (p = {lo.min():.2f}–{lo.max():.2f})",
+              f"None differed between groups (P = {lo.min():.2f}–{lo.max():.2f})",
               "07_ecm.py", "Fig6B"))
     z = row(ecm, metric="zonation")
     c.append(("C15", "zonation index", "s9_ecm_tests",
               f"the zonation index was flat (Δ = {z['diff']:.3f}, d = {z['cohens_d']:.2f}, "
-              f"p = {z['p']:.2f})", "07_ecm.py", "Fig6B"))
+              f"P = {z['p']:.2f})", "07_ecm.py", "Fig6B"))
 
     summ = load("s5c_compartment_de_summary")
     c.append(("C16", "compartment DE counts", "s5c_compartment_de_summary",
@@ -159,31 +175,31 @@ def build_checks():
     r = row(ab, metric="cdc2_D1_per1000")
     c.append(("C23", "cDC2 per 1000", "s5e_abundance_tests",
               f"per 1,000 tissue cells ({r['failed_mean']:.1f} versus {r['mature_mean']:.1f}; "
-              f"d = {r['cohens_d']:.2f}, p = {r['welch_p']:.2f})",
+              f"d = {r['cohens_d']:.2f}, P = {r['welch_p']:.2f})",
               "05e_cdc2.py", "Fig7C"))
     r = row(ab, metric="n_cdc2_D1")
     c.append(("C24", "cDC2 absolute", "s5e_abundance_tests",
               f"in absolute count ({r['failed_mean']:.1f} versus {r['mature_mean']:.1f} per donor; "
-              f"d = {r['cohens_d']:.2f}, p = {r['welch_p']:.2f})",
+              f"d = {r['cohens_d']:.2f}, P = {r['welch_p']:.2f})",
               "05e_cdc2.py", "Table 2"))
     r = row(ab, metric="cdc2_D2_per1000")
     c.append(("C25", "cDC2 marker rule", "s5e_abundance_tests",
               f"The marker-based definition agreed ({r['failed_mean']:.1f} versus "
-              f"{r['mature_mean']:.1f}; d = −{abs(r['cohens_d']):.2f}, p = {r['welch_p']:.2f})",
+              f"{r['mature_mean']:.1f}; d = −{abs(r['cohens_d']):.2f}, P = {r['welch_p']:.2f})",
               "05e_cdc2.py", "Table 2"))
     r = row(ab, metric="myeloid_per1000")
     c.append(("C26", "myeloid expansion", "s5e_abundance_tests",
               f"({r['failed_mean']:.0f} versus {r['mature_mean']:.0f} per 1,000; "
-              f"d = {r['cohens_d']:.2f}, p = {r['welch_p']:.3f}",
+              f"d = {r['cohens_d']:.2f}, P = {r['welch_p']:.3f}",
               "05e_cdc2.py", "Fig7E"))
     r2 = row(ab, metric="n_myeloid")
     c.append(("C27", "myeloid absolute", "s5e_abundance_tests",
-              f"absolute count d = {r2['cohens_d']:.2f}, p = {r2['welch_p']:.3f}",
+              f"absolute count d = {r2['cohens_d']:.2f}, P = {r2['welch_p']:.3f}",
               "05e_cdc2.py", "Table 2"))
     r = row(ab, metric="cdc2_D1_frac_myeloid")
     c.append(("C28", "cDC2 share", "s5e_abundance_tests",
               f"from {r['mature_mean']*100:.1f}% to {r['failed_mean']*100:.1f}% "
-              f"(d = −{abs(r['cohens_d']):.2f}, p = {r['welch_p']:.2f})",
+              f"(d = −{abs(r['cohens_d']):.2f}, P = {r['welch_p']:.2f})",
               "05e_cdc2.py", "Fig7D"))
 
     ex = load("s35_extra_checks")
@@ -194,12 +210,12 @@ def build_checks():
               "35_extra_checks.py", "Fig8C"))
     r = row(ex, metric="cDC2 per 1,000 (two smallest donors dropped)")
     c.append(("C30", "drop smallest donors", "s35_extra_checks",
-              f"(d = {r['cohens_d']:.2f}, p = {r['welch_p']:.2f})",
+              f"(d = {r['cohens_d']:.2f}, P = {r['welch_p']:.2f})",
               "35_extra_checks.py", "Table 2"))
     r = row(ex, metric="CD1C-low C1QA+ state frequency (CLR)")
     c.append(("C31", "CD1C-low state", "s35_extra_checks",
               f"({r['failed_mean']:.2f} versus {r['mature_mean']:.2f} CLR, "
-              f"d = {r['cohens_d']:.2f}, p = {r['welch_p']:.2f})",
+              f"d = {r['cohens_d']:.2f}, P = {r['welch_p']:.2f})",
               "05e_cdc2.py", "Results"))
 
     dep = load("s5e_cdc2_depth_by_group")
@@ -251,16 +267,16 @@ def build_checks():
     fn = row(ax_, axis="Fibronectin-integrin")
     c.append(("C40", "fibronectin-integrin", "s8c_pathway_tests",
               f"(+{fn['log2fc']:.2f} log2, d = {fn['cohens_d']:.2f}, "
-              f"p = {fn['welch_p']:.3f}, FDR = {fn['fdr']:.2f} across nine axes)",
+              f"P = {fn['welch_p']:.3f}, FDR = {fn['fdr']:.2f} across nine axes)",
               "06c_pathways.py", "Fig5A"))
     fib = load("s8c_pathway_tests_incoming_fib")
     fi = row(fib, axis="Fibronectin-integrin")
     c.append(("C41", "fibronectin fibroblast receivers", "s8c_pathway_tests_incoming_fib",
-              f"(+{fi['log2fc']:.2f}, p = {fi['welch_p']:.3f})",
+              f"(+{fi['log2fc']:.2f}, P = {fi['welch_p']:.3f})",
               "06c_pathways.py", "Fig5A"))
     tg = row(ax_, axis="TGF-beta")
     c.append(("C42", "TGF-beta axis", "s8c_pathway_tests",
-              f"TGF-β ({tg['log2fc']:+.3f}, p = {tg['welch_p']:.2f})",
+              f"TGF-β ({tg['log2fc']:+.3f}, P = {tg['welch_p']:.2f})",
               "06c_pathways.py", "Fig5A"))
 
     bl = pd.read_csv(f"{RES}/s10_focus_genes.csv", index_col=0)
@@ -277,7 +293,7 @@ def build_checks():
 
     sc = load("s10_program_tests")
     c.append(("C45", "bulk programme scores", "s10_program_tests",
-              f"No programme score differed (p = {sc['p'].min():.2f}–{sc['p'].max():.2f})",
+              f"No programme score differed (P = {sc['p'].min():.2f}–{sc['p'].max():.2f})",
               "08_bulk.py", "Fig6C"))
 
     de = load("s10_deseq_AVF_failed_vs_matured")
@@ -380,6 +396,7 @@ def verify_tables(text):
 def main():
     checks = [x for x in build_checks() if x[3]]
     text = open(MS, encoding="utf-8").read()
+    print(f"verifying against: {os.path.relpath(MS, ROOT).replace(os.sep, '/')}")
     rows, fails = [], []
     for cid, claim, src, snippet, script, fig in checks:
         snippet = re.sub(r"(?<![A-Za-z])-(?=\d)", "\u2212", snippet)
