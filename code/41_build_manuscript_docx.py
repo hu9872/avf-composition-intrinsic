@@ -70,9 +70,16 @@ def add_page_numbers(section):
         run._r.append(el)
 
 
+STAR = "\ue000"
+
+
 def clean_inline(text):
-    text = text.replace("\\*", "*")
-    return text
+    # `\*` marks a literal asterisk — the significance key in a figure legend,
+    # e.g. `\*P < 0.05, \*\*P < 0.01, \*\*\*P < 0.001`. Restoring it here would
+    # let the emphasis pass below read `**P < 0.01` as bold and swallow the
+    # symbol, so park it on a private-use code point and put it back only once
+    # the runs have been written.
+    return text.replace("\\*", STAR)
 
 
 TOKEN = re.compile(r"(\[\[[\d,\s]+\]\]|\^[0-9†*]+|\*\*.+?\*\*|`[^`]+`|(?<!\*)\*[^*]+\*(?!\*))")
@@ -80,6 +87,7 @@ TOKEN = re.compile(r"(\[\[[\d,\s]+\]\]|\^[0-9†*]+|\*\*.+?\*\*|`[^`]+`|(?<!\*)\
 
 def add_runs(p, text, size=12, bold=False, italic=False, sup_size=9):
     text = clean_inline(text)
+    first_run = len(p.runs)
     for part in TOKEN.split(text):
         if not part:
             continue
@@ -114,6 +122,10 @@ def add_runs(p, text, size=12, bold=False, italic=False, sup_size=9):
             r.italic = italic
             r.font.size = Pt(size)
             r.font.name = "Times New Roman"
+
+    for r in p.runs[first_run:]:
+        if STAR in r.text:
+            r.text = r.text.replace(STAR, "*")
 
 
 def flush_table(doc, rows):
