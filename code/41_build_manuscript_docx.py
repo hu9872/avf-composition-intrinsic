@@ -124,7 +124,16 @@ def flush_table(doc, rows):
     t = doc.add_table(rows=len(rows), cols=ncol)
     t.style = "Table Grid"
     t.alignment = WD_TABLE_ALIGNMENT.CENTER
-    t.autofit = True
+    # Fixed widths: the first column carries the state names, so it needs room to
+    # keep words whole; the rest share what is left of the 16 cm text block.
+    t.autofit = False
+    t.allow_autofit = False
+    usable, first = Cm(16.0), Cm(3.3) if ncol > 4 else Cm(4.0)
+    rest = Cm((16.0 - first.cm) / (ncol - 1))
+    for j, wd in enumerate([first] + [rest] * (ncol - 1)):
+        t.columns[j].width = wd
+        for c_ in t.columns[j].cells:
+            c_.width = wd
     for i, row in enumerate(rows):
         for j, cell in enumerate(row):
             c = t.cell(i, j)
