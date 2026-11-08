@@ -216,9 +216,9 @@ def build():
             p = doc.add_paragraph()
             p.paragraph_format.left_indent = Cm(0.75)
             p.paragraph_format.first_line_indent = Cm(-0.75)
-            p.paragraph_format.line_spacing_rule = WD_LINE_SPACING.SINGLE
+            p.paragraph_format.line_spacing_rule = WD_LINE_SPACING.DOUBLE
             p.paragraph_format.space_after = Pt(6)
-            add_runs(p, line, size=11)
+            add_runs(p, line, size=12)
         else:
             p = doc.add_paragraph()
             add_runs(p, line, size=12)
