@@ -357,8 +357,10 @@ def verify_tables(text):
              ("Myeloid cells per donor", "n_myeloid"),
              ("cDC2 per 1,000", "cdc2_D1_per1000"),
              ("cDC2 cells per donor", "n_cdc2_D1"),
-             ("cDC2, marker rule", "cdc2_D2_per1000"),
-             ("cDC2 as % of myeloid", "cdc2_D1_frac_myeloid")]
+             ("cDC2 as % of myeloid", "cdc2_D1_frac_myeloid"),
+             ("cDC2, marker rule, per 1,000", "cdc2_D2_per1000"),
+             ("cDC2, marker rule, cells per donor", "n_cdc2_D2"),
+             ("cDC2, marker rule, as % of myeloid", "cdc2_D2_frac_myeloid")]
     for label, key in pairs:
         line = [l for l in block.split("\n") if l.startswith(f"| {label}")]
         if not line:
