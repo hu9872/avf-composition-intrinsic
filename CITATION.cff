@@ -10,8 +10,8 @@ type: software
 license: MIT
 repository-code: "https://github.com/hu9872/avf-composition-intrinsic"
 url: "https://github.com/hu9872/avf-composition-intrinsic"
-version: "1.0.1"
-date-released: "2026-11-03"
+version: "1.0.2"
+date-released: "2026-11-08"
 keywords:
   - arteriovenous fistula
   - single-cell RNA sequencing
