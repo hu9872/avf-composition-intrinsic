@@ -114,7 +114,7 @@ redistributed.
 
 See `CITATION.cff`. Until the article is accepted, please cite the archived release:
 
-> Tang, Y., & Hu, D. (2026). Analysis code for: Cell composition accounts for much of the
+> Hu, D., & Tang, Y. (2026). Analysis code for: Cell composition accounts for much of the
 > transcriptomic difference between failed and matured human arteriovenous fistulas (v1.0.2).
 > Zenodo. https://doi.org/10.5281/zenodo.24047042
 

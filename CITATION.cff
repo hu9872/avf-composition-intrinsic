@@ -19,15 +19,15 @@ keywords:
   - reproducibility
   - negative results
 authors:
-  - family-names: "Tang"
-    given-names: "Yuewu"
-    affiliation: "Department of Nephrology, Chongqing University Three Gorges Hospital, 165 Xincheng Road, Wanzhou District, Chongqing 404000, China"
   - family-names: "Hu"
     given-names: "Daijun"
     affiliation: "Department of Nephrology, Chongqing University Three Gorges Hospital, 165 Xincheng Road, Wanzhou District, Chongqing 404000, China"
     # Add an ORCID iD here when one is available; leave the line out rather
     # than leaving an empty placeholder.
     # orcid: "https://orcid.org/0000-0000-0000-0000"
+  - family-names: "Tang"
+    given-names: "Yuewu"
+    affiliation: "Department of Nephrology, Chongqing University Three Gorges Hospital, 165 Xincheng Road, Wanzhou District, Chongqing 404000, China"
 # No `preferred-citation` block until the article is accepted. A preferred
 # citation must name the venue the article actually appeared in; leaving it out
 # means citation tools fall back to this software record — which is the correct

@@ -1,6 +1,6 @@
 """一次性填好仓库身份信息：CITATION.cff、.zenodo.json、git 提交作者。
 
-注意：本脚本把 creators 重写为**单一作者**。仓库现在是两位作者（Tang, Yuewu + Hu, Daijun），
+注意：本脚本把 creators 重写为**单一作者**。仓库现在是两位作者（Hu, Daijun + Tang, Yuewu），
 CITATION.cff / .zenodo.json 为权威版本；除非确实要退回单作者，不要重新运行本脚本。
 
 为什么需要它：Zenodo 建记录时读的是 CITATION.cff / .zenodo.json 里的 creators，
