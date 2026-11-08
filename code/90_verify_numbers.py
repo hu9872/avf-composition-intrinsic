@@ -22,17 +22,21 @@ RES = f"{ROOT}/results"
 
 def _default_manuscript():
     """Pick the most recently edited draft, so the gate never silently runs on a
-    superseded file. Set MS_PATH to pin a specific manuscript instead."""
+    superseded file. Set MS_PATH to pin a specific manuscript instead.
+
+    Returns None when no manuscript is present. That is the normal state of a
+    fresh clone: the prose is not part of the released archive, so the gate
+    recomputes every value and reports it without matching it against text."""
     cands = [p for p in glob.glob(os.path.join(ROOT, "manuscript", "Manuscript_*.md"))
              if "_backup" not in os.path.basename(p)]
     if not cands:
-        raise SystemExit("no manuscript under manuscript/; set MS_PATH")
+        return None
     cands.sort(key=os.path.getmtime)
     return cands[-1]
 
 
-# 默认校验 manuscript/ 下最近修改的稿子；指定稿件用 MS_PATH：
-# MS_PATH=manuscript/Manuscript_iScience_v1.md python code/90_verify_numbers.py
+# 默认校验 manuscript/ 下最近修改的稿子；指定稿件用 MS_PATH。
+# 稿件不随仓库发布，克隆后这里通常为 None，校验退化为"只重算、不比对文本"。
 MS = os.environ.get("MS_PATH") or _default_manuscript()
 
 
@@ -395,18 +399,28 @@ def verify_tables(text):
 
 def main():
     checks = [x for x in build_checks() if x[3]]
-    text = open(MS, encoding="utf-8").read()
-    print(f"verifying against: {os.path.relpath(MS, ROOT).replace(os.sep, '/')}")
+    text = open(MS, encoding="utf-8").read() if MS else None
+    if text is None:
+        print("verifying values only: no manuscript under manuscript/ "
+              "(set MS_PATH to also match every value against the prose)")
+    else:
+        print(f"verifying against: {os.path.relpath(MS, ROOT).replace(os.sep, '/')}")
     rows, fails = [], []
     for cid, claim, src, snippet, script, fig in checks:
         snippet = re.sub(r"(?<![A-Za-z])-(?=\d)", "\u2212", snippet)
-        ok = snippet in text
+        if text is None:
+            status = "RECOMPUTED"
+        else:
+            status = "PASS" if snippet in text else "FAIL"
         rows.append(dict(id=cid, claim=claim, expected_text=snippet,
                          source_file=f"results/{src}.csv", script=f"code/{script}",
-                         figure=fig, status="PASS" if ok else "FAIL"))
-        if not ok:
+                         figure=fig, status=status))
+        if status == "FAIL":
             fails.append((cid, claim, snippet))
-    n_tab, tab_problems = verify_tables(text)
+    if text is None:
+        n_tab, tab_problems = 0, []
+    else:
+        n_tab, tab_problems = verify_tables(text)
     for i, pb in enumerate(tab_problems):
         rows.append(dict(id=f"T{i+1:02d}", claim="table value", expected_text=pb,
                          source_file="results/", script="code/90_verify_numbers.py",
@@ -416,8 +430,15 @@ def main():
 
     print(f"checked {len(rows) - len(tab_problems)} numeric claims "
           f"({n_tab} table cells) against results/")
-    print(f"PASS {len(rows)-len(fails)} / FAIL {len(fails)}")
+    if text is None:
+        print(f"RECOMPUTED {len(rows)} / FAIL {len(fails)} "
+              f"(0 table cells checked: no manuscript text)")
+    else:
+        print(f"PASS {len(rows)-len(fails)} / FAIL {len(fails)}")
     for cid, claim, snip in fails:
+        if text is None:
+            print(f"\n[FAIL] {cid} {claim}\n  expected value: {snip}")
+            continue
         print(f"\n[FAIL] {cid} {claim}\n  expected in manuscript: {snip}")
         key = snip[:28]
         idx = text.find(key)

@@ -166,7 +166,7 @@ def build():
     cp = doc.core_properties
     cp.author = cp.last_modified_by = "Daijun Hu"
     cp.title = "Supplemental Material - methods, figure legends and tables"
-    cp.subject = "iScience research article - supplemental information"
+    cp.subject = os.environ.get("MS_SUBJECT", "supplemental information")
     cp.comments = ""
     doc.save(OUT)
     print("saved", OUT)

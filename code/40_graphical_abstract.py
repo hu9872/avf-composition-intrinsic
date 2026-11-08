@@ -1,4 +1,4 @@
-"""Graphical abstract (iScience): 1200 x 1200 px, 300 dpi, 正方形（4 x 4 in）。
+"""Graphical abstract: 1200 x 1200 px, 300 dpi, 正方形（4 x 4 in）。
 
 内容：上「成熟 vs 失败」组织示意（总细胞数相同，失败组髓系细胞更多、cDC2 数量不变）
       中 分解式（观测 log2FC = 组成项 + 内在项；组成项中位占 51%）

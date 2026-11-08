@@ -1,4 +1,4 @@
-"""把 Manuscript_iScience_v1.md 构建为 Cell Press 体例 DOCX。
+"""把 Markdown 稿件构建为投稿用 DOCX（体例由调用方给定）。
 
 处理：标题/作者/Summary/各级标题/段落/项目符号/markdown 表格；
       [[1,2]] -> 上标引用；**bold**、*italic*、`code`；
@@ -14,13 +14,34 @@ from docx.enum.table import WD_TABLE_ALIGNMENT
 from docx.oxml.ns import qn
 from docx.oxml import OxmlElement
 
-import os
-SRC = os.environ.get("MS_SRC") or r"D:/AVF_GSE_2611/manuscript/Manuscript_iScience_v1.md"
-OUT = os.environ.get("MS_OUT") or r"D:/AVF_GSE_2611/manuscript/Manuscript_iScience_v1.docx"
-DOC_TITLE = os.environ.get("MS_TITLE") or (
-    "Apparent transcriptional signatures of arteriovenous fistula maturation "
-    "failure are dominated by cell composition")
-DOC_SUBJECT = os.environ.get("MS_SUBJECT") or "iScience research article"
+import glob
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+
+def _latest_manuscript():
+    """manuscript/ 下最近修改的 Manuscript_*.md，供未显式指定 MS_SRC 时使用。"""
+    cands = [p for p in glob.glob(os.path.join(ROOT, "manuscript", "Manuscript_*.md"))
+             if "_backup" not in os.path.basename(p)]
+    if not cands:
+        raise SystemExit("no manuscript under manuscript/; set MS_SRC")
+    cands.sort(key=os.path.getmtime)
+    return cands[-1]
+
+
+def _title_from(path):
+    """取稿件首个一级标题作为文档标题。"""
+    with open(path, encoding="utf-8") as fh:
+        for line in fh:
+            if line.startswith("# "):
+                return line[2:].strip()
+    return ""
+
+
+SRC = os.environ.get("MS_SRC") or _latest_manuscript()
+OUT = os.environ.get("MS_OUT") or os.path.splitext(SRC)[0] + ".docx"
+DOC_TITLE = os.environ.get("MS_TITLE") or ""
+DOC_SUBJECT = os.environ.get("MS_SUBJECT") or "Research article"
 
 
 def add_line_numbers(section):
@@ -207,7 +228,7 @@ def build():
 
     cp = doc.core_properties
     cp.author = cp.last_modified_by = "Daijun Hu"
-    cp.title = DOC_TITLE
+    cp.title = DOC_TITLE or _title_from(SRC)
     cp.subject = DOC_SUBJECT
     cp.comments = ""
 

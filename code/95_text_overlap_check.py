@@ -45,7 +45,16 @@ REF = ROOT / "_ref"
 RES = ROOT / "results"
 PLAN = ROOT / "plan"
 
-MANUSCRIPT = ROOT / "manuscript" / "Manuscript_iScience_v1.md"
+
+def _manuscript_path():
+    """最近修改的稿件；manuscript/ 下没有稿件时返回 None（稿件不随仓库发布）。"""
+    cands = [p for p in ROOT.glob("manuscript/Manuscript_*.md")
+             if "_backup" not in p.name]
+    if not cands:
+        return None
+    cands.sort(key=lambda p: p.stat().st_mtime)
+    return cands[-1]
+
 
 # 低于此词数的连续重合不报告（iThenticate 亦忽略 5-8 词以下的通用短语）
 MIN_RUN = 12
@@ -154,9 +163,16 @@ def main() -> None:
     ap.add_argument("--n", type=int, default=8, help="shingle 词数，默认 8")
     ap.add_argument("--min-run", type=int, default=MIN_RUN, help="报告的最小连续重合词数")
     ap.add_argument("--no-self", action="store_true", help="不与自己前稿比对")
+    ap.add_argument("--manuscript", default=None,
+                    help="稿件路径；缺省取 manuscript/ 下最近修改的 Manuscript_*.md")
     args = ap.parse_args()
 
-    md = MANUSCRIPT.read_text(encoding="utf-8")
+    md_path = Path(args.manuscript) if args.manuscript else _manuscript_path()
+    if md_path is None or not md_path.exists():
+        print("跳过早前自比对：manuscript/ 下没有稿件（稿件不随仓库发布）")
+        return
+    print(f"稿件：{md_path.relative_to(ROOT) if md_path.is_relative_to(ROOT) else md_path}")
+    md = md_path.read_text(encoding="utf-8")
     text, paras = strip_manuscript(md)
     mtoks = tokens(text)
     midx = shingles(mtoks, args.n)

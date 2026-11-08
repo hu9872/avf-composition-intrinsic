@@ -28,7 +28,10 @@ _stat_tmp*
 *.loom
 *.rds
 
-# ---- Typeset outputs (rebuilt by code/41_build_iscience_docx.py and code/45_build_document_s1.py) ----
+# ---- Manuscript prose never enters the repository (submitted separately) ----
+manuscript/*.md
+
+# ---- Typeset outputs (rebuilt by code/41_build_manuscript_docx.py and code/45_build_document_s1.py) ----
 manuscript/*.docx
 supplement/*.docx
 plan/**/*.docx
@@ -60,9 +63,6 @@ supplement/csv/S5_compartment_DE.csv
 # them would disclose unpublished text before the decision letter.
 submission/
 _chk/
-manuscript/_*
-manuscript/Manuscript_Kidney360_v1.md
-manuscript/Reference_Verification_Kidney360.md
 code/43_build_cover_letter_kidney360.py
 code/44_build_title_page_kidney360.py
 code/91_verify_refs_doi.py
@@ -71,3 +71,6 @@ results/ref_verification.csv
 # Journal-supplied guidance and typeset outputs downloaded or rebuilt locally
 /*.pdf
 supplement/*.pdf
+
+# ---- Local QA output of the text-overlap pre-screen (quotes manuscript prose) ----
+results/s95_*

@@ -17,7 +17,25 @@ Everything needed to reproduce the numbers, figures and tables in the manuscript
 | `code/` | Analysis pipeline, figure builders, document builders, and the numeric-provenance assertion script |
 | `results/` | Every result table cited in the article (large intermediate marker tables excluded — see `docs/RESULTS_INDEX.md`) |
 | `figures/` | Main figures 1–8, supplementary figures S1–S3 and the graphical abstract (PDF + 300 dpi PNG) |
-| `manuscript/` | Manuscript source (Markdown). The submission checklist stored beside it is repository-only and is excluded from the archive (see `.gitattributes`) |
+
+The manuscript text is not part of this repository and not part of any release. The deposit is
+the analysis code; the prose is submitted to the journal separately. A working copy may sit in
+`manuscript/` on a local machine, where `.gitignore` keeps it out of version control and
+`.gitattributes` keeps it out of every archive.
+
+**Figure files and article figure numbers.** The file stems predate the figure order used in
+the submitted article, so they do not match it one to one:
+
+| File stem | Article figure |
+|---|---|
+| `Fig1_atlas` | Figure 1 |
+| `Fig2_subclusters` | Figure 2 |
+| `Fig3_composition` | Figure 3 |
+| `Fig4_trajectory` | Figure 4 |
+| `Fig6_compartments` | Figure 5 |
+| `Fig7_myeloid_cdc2` | Figure 6 |
+| `Fig8_signal_decomposition` | Figure 7 |
+| `Fig5_communication` | Figure 8 |
 | `docs/` | How to reproduce, where the data come from, which file backs which claim |
 | `supplement/` | `Data_S1.xlsx` (13 worksheets, S1–S13), `Document_S1.md` (Supplemental methods, figures and tables), and the per-step CSV exports in `csv/` — see `supplement/README.md` for how the three S-numbering series differ |
 | `data/` | **Not included** (23 GB). Download instructions in `data/README.md` |
@@ -39,7 +57,7 @@ python code/01_prepare.py
 # 4. re-derive results and figures
 make all
 
-# 5. check that every number in the manuscript still matches results/
+# 5. re-derive every number from results/ (add MS_PATH to also match the prose)
 python code/90_verify_numbers.py
 ```
 
@@ -54,12 +72,15 @@ python code/90_verify_numbers.py
   (n = 6 failed, 6 matured).
 * **Pinned environment** — `environment.yml` / `requirements.txt`; versions frozen
   2026-11-01.
-* **Numeric provenance** — `code/90_verify_numbers.py` parses the manuscript, recomputes each
-  quoted value from `results/`, and fails loudly on any mismatch. `results/provenance.csv`
-  records, for every claim, the source file, the producing script and the figure.
-* **Code / text overlap pre-screen** — `code/95_text_overlap_check.py` compares the manuscript
-  against the two papers that originally published these datasets, and includes a positive
-  control so that a null result is interpretable.
+* **Numeric provenance** — `code/90_verify_numbers.py` recomputes every quoted value from
+  `results/` and, when a manuscript is available, asserts that the value appears in the text;
+  it fails loudly on any mismatch. Because the prose is not shipped, a fresh clone runs in
+  recompute-only mode and reports each claim as `RECOMPUTED`. `results/provenance.csv` records,
+  for every claim, the source file, the producing script and the figure.
+* **Code / text overlap pre-screen** — `code/95_text_overlap_check.py` compares a local
+  manuscript (`--manuscript`, default: the most recent `manuscript/Manuscript_*.md`) against
+  the two papers that originally published these datasets, and includes a positive control so
+  that a null result is interpretable. It exits cleanly when no manuscript is present.
 
 ## What this study does *not* claim
 

@@ -1,5 +1,10 @@
 # Keep repository-only working documents out of `git archive` output.
-# The Zenodo deposit is produced with `git archive`, so a path marked
+# The release archive is produced with `git archive`, so a path marked
 # export-ignore stays under version control but never enters the archive.
+#
+# The deposit is the analysis code. Manuscript prose is submitted separately to
+# the journal and must not travel with the archive, so the whole directory is
+# excluded: a local copy is ignored by .gitignore, and this rule keeps any
+# committed manuscript out of a future release as well.
 
-manuscript/submission_checklist_iScience.md export-ignore
+manuscript/ export-ignore
