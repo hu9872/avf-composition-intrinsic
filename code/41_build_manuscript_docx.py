@@ -19,6 +19,21 @@ import glob
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
+def _fix_props(path):
+    """Replace the docx template's placeholder properties with measured ones.
+
+    python-docx starts from a 2013-vintage template: created 2013-12-23, every
+    counter zero, AppVersion 14, and a blank-page thumbnail.  See code/docx_props.py.
+    """
+    try:
+        import docx_props
+        info = docx_props.sanitize(path, **docx_props.defaults_for(path))
+        print("  props: pages=%(pages)s words=%(words)s lines=%(lines)s "
+              "totalmin=%(total_time)s rev=%(revision)s" % info)
+    except Exception as exc:                                  # noqa: BLE001
+        print("[警告] 文档属性未处理:", exc)
+
+
 def _latest_manuscript():
     """manuscript/ 下最近修改的 Manuscript_*.md，供未显式指定 MS_SRC 时使用。"""
     cands = [p for p in glob.glob(os.path.join(ROOT, "manuscript", "Manuscript_*.md"))
@@ -256,12 +271,14 @@ def build():
     try:
         doc.save(OUT)
         print("saved", OUT)
+        _fix_props(OUT)
     except PermissionError:
         # Word / 预览器占用文件时另存，避免流水线中断
         alt = os.path.splitext(OUT)[0] + ".new.docx"
         doc.save(alt)
         print(f"[警告] {OUT} 被占用（可能正在预览器中打开），已另存为 {alt}")
         print("       关闭该文档后重跑本脚本即可覆盖正式文件名。")
+        _fix_props(alt)
 
 
 if __name__ == "__main__":
